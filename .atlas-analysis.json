@@ -1,0 +1,342 @@
+{
+  "projectType": "frontend",
+  "projectName": "Inspira UI",
+  "projectDescription": "A curated collection of beautifully designed, reusable Vue and Nuxt components for building modern web applications.",
+  "theme": "palm",
+  "primaryColor": "#8B5CF6",
+  "lightColor": "#A78BFA",
+  "darkColor": "#7C3AED",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "installation",
+              "contributing",
+              "code-of-conduct"
+            ]
+          },
+          {
+            "group": "Components",
+            "pages": [
+              "components/overview"
+            ]
+          },
+          {
+            "group": "Backgrounds",
+            "pages": [
+              "components/backgrounds/aurora-background",
+              "components/backgrounds/black-hole-background",
+              "components/backgrounds/bubbles-bg",
+              "components/backgrounds/cosmic-portal",
+              "components/backgrounds/falling-stars",
+              "components/backgrounds/flickering-grid",
+              "components/backgrounds/interactive-grid-pattern",
+              "components/backgrounds/lamp-effect",
+              "components/backgrounds/liquid-background",
+              "components/backgrounds/neural-background",
+              "components/backgrounds/particle-whirlpool-bg",
+              "components/backgrounds/particles-bg",
+              "components/backgrounds/pattern-background",
+              "components/backgrounds/ripple",
+              "components/backgrounds/silk-background",
+              "components/backgrounds/singularity-background",
+              "components/backgrounds/snowfall-bg",
+              "components/backgrounds/sparkles",
+              "components/backgrounds/stars-background",
+              "components/backgrounds/stractium-background",
+              "components/backgrounds/tetris",
+              "components/backgrounds/thunderstorm-background",
+              "components/backgrounds/video-text",
+              "components/backgrounds/vortex",
+              "components/backgrounds/warp-background",
+              "components/backgrounds/wavy-background"
+            ]
+          },
+          {
+            "group": "Buttons",
+            "pages": [
+              "components/buttons/gradient-button",
+              "components/buttons/interactive-hover-button",
+              "components/buttons/rainbow-button",
+              "components/buttons/ripple-button",
+              "components/buttons/shimmer-button"
+            ]
+          },
+          {
+            "group": "Cards",
+            "pages": [
+              "components/cards/animated-card",
+              "components/cards/animated-pricing",
+              "components/cards/card-hover-effect",
+              "components/cards/expandable-card",
+              "components/cards/flip-card",
+              "components/cards/glare-card",
+              "components/cards/reveal-card",
+              "components/cards/testimonial-card"
+            ]
+          },
+          {
+            "group": "Cursors",
+            "pages": [
+              "components/cursors/cursor-following-text",
+              "components/cursors/glowing-stars-background",
+              "components/cursors/spotlight",
+              "components/cursors/trailing-cursor"
+            ]
+          },
+          {
+            "group": "Device Mocks",
+            "pages": [
+              "components/device-mocks/browser-mock",
+              "components/device-mocks/phone-mock"
+            ]
+          },
+          {
+            "group": "Input & Forms",
+            "pages": [
+              "components/input-and-forms/code-input",
+              "components/input-and-forms/input",
+              "components/input-and-forms/multi-select",
+              "components/input-and-forms/otp-input",
+              "components/input-and-forms/password-input",
+              "components/input-and-forms/quantity-selector"
+            ]
+          },
+          {
+            "group": "Text Animations",
+            "pages": [
+              "components/text-animations/3d-text",
+              "components/text-animations/blur-reveal",
+              "components/text-animations/box-reveal",
+              "components/text-animations/colorful-text",
+              "components/text-animations/container-text-flip",
+              "components/text-animations/encrypted-text",
+              "components/text-animations/flip-words",
+              "components/text-animations/focus",
+              "components/text-animations/hyper-text",
+              "components/text-animations/letter-pullup",
+              "components/text-animations/line-shadow-text",
+              "components/text-animations/morphing-text",
+              "components/text-animations/number-ticker",
+              "components/text-animations/radiant-text",
+              "components/text-animations/sparkles-text",
+              "components/text-animations/spinning-text",
+              "components/text-animations/text-generate-effect",
+              "components/text-animations/text-glitch",
+              "components/text-animations/text-highlight",
+              "components/text-animations/text-hover-effect"
+            ]
+          },
+          {
+            "group": "Special Effects",
+            "pages": [
+              "components/special-effects/animated-beam",
+              "components/special-effects/border-beam",
+              "components/special-effects/confetti",
+              "components/special-effects/dither-shader",
+              "components/special-effects/glow-border",
+              "components/special-effects/glowing-effect",
+              "components/special-effects/meteors",
+              "components/special-effects/neon-border",
+              "components/special-effects/particle-image",
+              "components/special-effects/progressive-blur",
+              "components/special-effects/scratch-to-reveal",
+              "components/special-effects/spring-calendar"
+            ]
+          },
+          {
+            "group": "Visualization",
+            "pages": [
+              "components/visualization/bending-gallery",
+              "components/visualization/carousal-3d",
+              "components/visualization/file-tree",
+              "components/visualization/github-globe",
+              "components/visualization/globe",
+              "components/visualization/icon-cloud",
+              "components/visualization/infinite-grid",
+              "components/visualization/light-speed",
+              "components/visualization/liquid-glass",
+              "components/visualization/liquid-logo",
+              "components/visualization/logo-cloud",
+              "components/visualization/logo-origami",
+              "components/visualization/orbit",
+              "components/visualization/spline",
+              "components/visualization/world-map"
+            ]
+          },
+          {
+            "group": "Miscellaneous",
+            "pages": [
+              "components/miscellaneous/animate-grid",
+              "components/miscellaneous/animated-circular-progressbar",
+              "components/miscellaneous/animated-list",
+              "components/miscellaneous/animated-modal",
+              "components/miscellaneous/animated-tooltip",
+              "components/miscellaneous/bento-grid",
+              "components/miscellaneous/book",
+              "components/miscellaneous/compare",
+              "components/miscellaneous/container-scroll",
+              "components/miscellaneous/dock",
+              "components/miscellaneous/expandable-gallery",
+              "components/miscellaneous/images-slider",
+              "components/miscellaneous/lens",
+              "components/miscellaneous/link-preview",
+              "components/miscellaneous/marquee",
+              "components/miscellaneous/morphing-tabs",
+              "components/miscellaneous/multi-step-loader",
+              "components/miscellaneous/photo-gallery",
+              "components/miscellaneous/scroll-island",
+              "components/miscellaneous/shader-toy"
+            ]
+          },
+          {
+            "group": "Testimonials",
+            "pages": [
+              "components/testimonials/animated-testimonials",
+              "components/testimonials/marquee-testimonials"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Free and open source under MIT license",
+    "Highly configurable components tailored to your design needs",
+    "127+ beautiful components inspired by Aceternity UI and Magic UI",
+    "Mobile optimized and responsive across all devices",
+    "Full Nuxt and Vue 3 compatibility with Composition API",
+    "Built with TailwindCSS v4, motion-v, and VueUse",
+    "Copy-paste approach - own and customize the code",
+    "Advanced animations and special effects",
+    "3D visualizations with Three.js and TresJS",
+    "Community-driven with active contributions"
+  ],
+  "publicApiSurface": [
+    "AuroraBackground",
+    "BlackHoleBackground",
+    "BubblesBackground",
+    "CosmicPortal",
+    "FallingStars",
+    "FlickeringGrid",
+    "InteractiveGridPattern",
+    "LampEffect",
+    "LiquidBackground",
+    "NeuralBackground",
+    "ParticleWhirlpoolBackground",
+    "ParticlesBackground",
+    "PatternBackground",
+    "Ripple",
+    "SilkBackground",
+    "SingularityBackground",
+    "SnowfallBackground",
+    "Sparkles",
+    "StarsBackground",
+    "StractiumBackground",
+    "Tetris",
+    "ThunderstormBackground",
+    "VideoText",
+    "Vortex",
+    "WarpBackground",
+    "WavyBackground",
+    "GradientButton",
+    "InteractiveHoverButton",
+    "RainbowButton",
+    "RippleButton",
+    "ShimmerButton",
+    "AnimatedCard",
+    "AnimatedPricing",
+    "CardHoverEffect",
+    "ExpandableCard",
+    "FlipCard",
+    "GlareCard",
+    "RevealCard",
+    "TestimonialCard",
+    "CursorFollowingText",
+    "GlowingStarsBackground",
+    "Spotlight",
+    "TrailingCursor",
+    "BrowserMock",
+    "PhoneMock",
+    "CodeInput",
+    "Input",
+    "MultiSelect",
+    "OTPInput",
+    "PasswordInput",
+    "QuantitySelector",
+    "Text3D",
+    "BlurReveal",
+    "BoxReveal",
+    "ColorfulText",
+    "ContainerTextFlip",
+    "EncryptedText",
+    "FlipWords",
+    "Focus",
+    "HyperText",
+    "LetterPullup",
+    "LineShadowText",
+    "MorphingText",
+    "NumberTicker",
+    "RadiantText",
+    "SparklesText",
+    "SpinningText",
+    "TextGenerateEffect",
+    "TextGlitch",
+    "TextHighlight",
+    "TextHoverEffect",
+    "AnimatedBeam",
+    "BorderBeam",
+    "Confetti",
+    "DitherShader",
+    "GlowBorder",
+    "GlowingEffect",
+    "Meteors",
+    "NeonBorder",
+    "ParticleImage",
+    "ProgressiveBlur",
+    "ScratchToReveal",
+    "SpringCalendar",
+    "BendingGallery",
+    "Carousel3D",
+    "FileTree",
+    "GithubGlobe",
+    "Globe",
+    "IconCloud",
+    "InfiniteGrid",
+    "LightSpeed",
+    "LiquidGlass",
+    "LiquidLogo",
+    "LogoCloud",
+    "LogoOrigami",
+    "Orbit",
+    "Spline",
+    "WorldMap",
+    "AnimateGrid",
+    "AnimatedCircularProgressbar",
+    "AnimatedList",
+    "AnimatedModal",
+    "AnimatedTooltip",
+    "BentoGrid",
+    "Book",
+    "Compare",
+    "ContainerScroll",
+    "Dock",
+    "ExpandableGallery",
+    "ImagesSlider",
+    "Lens",
+    "LinkPreview",
+    "Marquee",
+    "MorphingTabs",
+    "MultiStepLoader",
+    "PhotoGallery",
+    "ScrollIsland",
+    "ShaderToy",
+    "AnimatedTestimonials",
+    "MarqueeTestimonials"
+  ]
+}
