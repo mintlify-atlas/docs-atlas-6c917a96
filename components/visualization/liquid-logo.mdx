@@ -1,0 +1,43 @@
+---
+title: Liquid Logo
+description: An advanced WebGL-based component that applies a dynamic, liquid effect to logos or images using custom shaders.
+---
+
+An advanced WebGL-based component that applies a dynamic, liquid effect to logos or images using custom shaders.
+
+## Usage
+
+```vue
+<script setup lang="ts">
+import { LiquidLogo } from '@/components/visualization'
+</script>
+
+<template>
+  <LiquidLogo
+    image-url="/logo.png"
+    :pattern-scale="2"
+    :refraction="0.015"
+    :edge="0.4"
+    :liquid="0.07"
+    :speed="0.3"
+  />
+</template>
+```
+
+## Props
+
+| Prop Name      | Type     | Default | Description                                  |
+| -------------- | -------- | ------- | -------------------------------------------- |
+| `class`        | `string` | `""`    | Additional CSS classes for custom styling.   |
+| `imageUrl`     | `string` | `""`    | URL of the image to apply the liquid effect. |
+| `patternScale` | `number` | `2`     | Scale of the distortion pattern.             |
+| `refraction`   | `number` | `0.015` | Amount of refraction applied to the image.   |
+| `edge`         | `number` | `0.4`   | Sharpness of the edge effect.                |
+| `patternBlur`  | `number` | `0.005` | Blur effect applied to the pattern.          |
+| `liquid`       | `number` | `0.07`  | Intensity of the liquid animation.           |
+| `speed`        | `number` | `0.3`   | Animation speed of the liquid effect.        |
+
+## Credits
+
+- Inspired by the Apple Fluid Motion design
+- Ported and enhanced from [Paper Design Concept](https://github.com/paper-design/liquid-logo)

@@ -1,0 +1,42 @@
+---
+title: "Blur Reveal"
+description: "A component to smoothly blur fade in content."
+icon: "eye"
+---
+
+Create smooth blur fade-in animations for your content with customizable duration and delay.
+
+## Usage
+
+```vue
+<BlurReveal
+  :duration="1"
+  :delay="1"
+  blur="10px"
+  :yOffset="20"
+>
+  <p>Your content here</p>
+</BlurReveal>
+```
+
+## Props
+
+<ParamField path="duration" type="number" default="1">
+  Duration of the blur fade in animation.
+</ParamField>
+
+<ParamField path="delay" type="number" default="1">
+  Delay between child components to reveal.
+</ParamField>
+
+<ParamField path="blur" type="string" default="10px">
+  Amount of blur to apply to the child components.
+</ParamField>
+
+<ParamField path="yOffset" type="number" default="20">
+  Specifies the vertical offset distance (yOffset) for the entrance animation.
+</ParamField>
+
+## Credits
+
+Credits to [Magic UI](https://magicui.design/docs/components/blur-fade) for this fantastic component.

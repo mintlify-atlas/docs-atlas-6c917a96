@@ -1,0 +1,83 @@
+---
+title: Animated Modal
+description: A modal dialog with a 3D entrance animation and blurred backdrop.
+---
+
+## Overview
+
+Animated Modal is a modal dialog component featuring 3D entrance animations, blurred backdrop, and flexible controls. Built with motion-v for smooth animations.
+
+## Usage
+
+```vue
+<template>
+  <AnimatedModal v-model:open="isOpen">
+    <AnimatedModalTrigger>
+      <button>Open Modal</button>
+    </AnimatedModalTrigger>
+    <AnimatedModalBody>
+      <AnimatedModalContent>
+        <!-- Your content here -->
+      </AnimatedModalContent>
+      <AnimatedModalFooter>
+        <!-- Footer actions -->
+      </AnimatedModalFooter>
+    </AnimatedModalBody>
+  </AnimatedModal>
+</template>
+```
+
+## API Reference
+
+### `<AnimatedModal />`
+
+#### Props
+
+| Prop Name     | Type      | Default | Description                     |
+| ------------- | --------- | ------- | ------------------------------- |
+| `open`        | `boolean` | `-`     | Controlled open state.          |
+| `defaultOpen` | `boolean` | `false` | Uncontrolled initial state.     |
+| `closeOnEsc`  | `boolean` | `true`  | Close modal when pressing `Esc` |
+
+#### Events
+
+| Event Name    | Payload   | Description                          |
+| ------------- | --------- | ------------------------------------ |
+| `update:open` | `boolean` | Fired when open state changes.       |
+| `open`        | -         | Fired when `openModal()` is called.  |
+| `close`       | -         | Fired when `closeModal()` is called. |
+
+#### Slots
+
+| Slot Name | Slot Props                                  |
+| --------- | ------------------------------------------- |
+| `default` | `open`, `openModal`, `closeModal`, `toggle` |
+
+#### Composable
+
+- `useAnimatedModal()` — access modal state/methods from any nested child component (must be used within `<AnimatedModal />`).
+
+### `<AnimatedModalBody />`
+
+#### Props
+
+| Prop Name        | Type                    | Default  | Description                               |
+| ---------------- | ----------------------- | -------- | ----------------------------------------- |
+| `class`          | `string`                | `""`     | Extra classes for the modal panel.        |
+| `overlayClass`   | `string`                | `""`     | Extra classes for the overlay.            |
+| `contentClass`   | `string`                | `""`     | Extra classes for the content wrapper.    |
+| `showClose`      | `boolean`               | `true`   | Show close button.                        |
+| `closeOnOutside` | `boolean`               | `true`   | Close when clicking outside the dialog.   |
+| `lockScroll`     | `boolean`               | `true`   | Lock page scroll while the modal is open. |
+| `zIndex`         | `number`                | `10000`  | Z-index for the modal layer.              |
+| `teleportTo`     | `string \| HTMLElement` | `"body"` | Teleport target for the modal layer.      |
+
+## Dependencies
+
+- motion-v
+- @vueuse/core
+
+## Credits
+
+- Ported from [Aceternity UI's Animated Modal](https://ui.aceternity.com/components/animated-modal).
+- Animations powered by [motion-v](https://motion.dev/).

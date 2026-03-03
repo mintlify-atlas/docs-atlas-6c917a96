@@ -1,0 +1,32 @@
+---
+title: Logo Origami
+description: Animated flipping logo with origami effect.
+---
+
+Animated flipping logo with origami effect.
+
+## Usage
+
+```vue
+<script setup lang="ts">
+import { LogoOrigami } from '@/components/visualization'
+</script>
+
+<template>
+  <LogoOrigami :duration="1.5" :delay="2.5">
+    <img src="/logo.svg" alt="Logo" />
+  </LogoOrigami>
+</template>
+```
+
+## Props
+
+| Prop Name  | Type     | Default | Description                                |
+| ---------- | -------- | ------- | ------------------------------------------ |
+| `class`    | `string` | `""`    | Additional CSS classes for custom styling. |
+| `duration` | `number` | `1.5`   | Duration of the flip animation in seconds. |
+| `delay`    | `number` | `2.5`   | Delay between flip animations in seconds.  |
+
+## Credits
+
+- Inspired by origami animations and flip effects at [hover.dev](https://www.hover.dev/components/other#logo-origami)

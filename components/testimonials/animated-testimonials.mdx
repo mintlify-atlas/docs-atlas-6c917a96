@@ -1,0 +1,62 @@
+---
+title: Animated Testimonials
+description: An engaging and animated testimonial component showcasing user feedback with transitions and auto-play functionality.
+---
+
+## Overview
+
+Animated Testimonials is a component that displays user testimonials with smooth transitions and optional autoplay. Perfect for showcasing customer feedback on landing pages.
+
+## Usage
+
+```vue
+<template>
+  <AnimatedTestimonials
+    :testimonials="testimonials"
+    :autoplay="true"
+    :duration="5000"
+  />
+</template>
+
+<script setup>
+const testimonials = [
+  {
+    quote: "This product changed my life!",
+    name: "John Doe",
+    designation: "CEO",
+    image: "/avatar.jpg"
+  },
+  {
+    quote: "Exceptional quality and service!",
+    name: "Jane Smith",
+    designation: "Product Manager",
+    image: "/avatar2.jpg"
+  }
+]
+</script>
+```
+
+## API Reference
+
+### Props
+
+| Prop Name      | Type            | Default | Description                                                                                    |
+| -------------- | --------------- | ------- | ---------------------------------------------------------------------------------------------- |
+| `testimonials` | `Testimonial[]` | `[]`    | An array of testimonial objects containing quote, name, image, and designation.                |
+| `autoplay`     | `boolean`       | `false` | Whether to cycle through testimonials automatically.                                           |
+| `duration`     | `number`        | `5000`  | Duration (in milliseconds) to wait before automatically transitioning to the next testimonial. |
+
+### Testimonial Object
+
+Each testimonial object must contain the following fields:
+
+| Property      | Type     | Description                                                       |
+| ------------- | -------- | ----------------------------------------------------------------- |
+| `quote`       | `string` | The testimonial text.                                             |
+| `name`        | `string` | The name of the person or entity providing the testimonial.       |
+| `designation` | `string` | The position or role of the testimonial author (e.g., CEO, user). |
+| `image`       | `string` | URL of the image or avatar for the testimonial author.            |
+
+## Credits
+
+- Ported from [Aceternity UI Animated Testimonials](https://ui.aceternity.com/components/animated-testimonials).

@@ -1,0 +1,37 @@
+---
+title: "Line Shadow Text"
+description: "A line shadow text component for Magic UI that adds a shadow effect to the text, making it visually appealing and engaging."
+icon: "highlighter"
+---
+
+Add elegant shadow effects to your text with customizable colors and HTML elements.
+
+## Usage
+
+```vue
+<LineShadowText
+  shadowColor="black"
+  as="span"
+>
+  Your text here
+</LineShadowText>
+```
+
+## Props
+
+<ParamField path="shadowColor" type="string" default="black">
+  The color of the shadow effect.
+</ParamField>
+
+<ParamField path="class" type="string" default="">
+  Additional CSS classes for custom styling.
+</ParamField>
+
+<ParamField path="as" type="string" default="span">
+  The HTML element to render the text as.
+</ParamField>
+
+## Credits
+
+- Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component
+- Ported from [Magic UI's Line Shadow Text](https://magicui.design/docs/components/line-shadow-text)

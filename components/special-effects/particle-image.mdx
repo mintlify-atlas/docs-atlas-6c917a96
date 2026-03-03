@@ -1,0 +1,98 @@
+---
+title: Particle Image
+description: Visually appealing particle animation applied to images as seen on NuxtLabs.com
+---
+
+## Overview
+
+The Particle Image component creates stunning particle animations applied to images, similar to the effects seen on NuxtLabs.com. It offers extensive customization options for particle behavior, appearance, and animation.
+
+## Usage
+
+```vue
+<ParticleImage
+  imageSrc="/path/to/image.jpg"
+  canvasWidth="800"
+  canvasHeight="600"
+  renderer="webgl"
+  color="#FFFFFF"
+  initPosition="random"
+  initDirection="random"
+  :responsiveWidth="true"
+/>
+```
+
+## Props
+
+<ResponseField name="imageSrc" type="string" required>
+  Source URL for the image to which the particle effect is applied.
+</ResponseField>
+
+<ResponseField name="class" type="string">
+  Additional CSS classes to apply to the image element.
+</ResponseField>
+
+<ResponseField name="canvasWidth" type="string">
+  Width of the particle effect canvas.
+</ResponseField>
+
+<ResponseField name="canvasHeight" type="string">
+  Height of the particle effect canvas.
+</ResponseField>
+
+<ResponseField name="gravity" type="string">
+  Gravity force affecting the particle movement.
+</ResponseField>
+
+<ResponseField name="particleSize" type="string">
+  Size of the particles.
+</ResponseField>
+
+<ResponseField name="particleGap" type="string">
+  Gap between particles.
+</ResponseField>
+
+<ResponseField name="mouseForce" type="string">
+  Force applied to particles based on mouse movement.
+</ResponseField>
+
+<ResponseField name="renderer" type="'default' | 'webgl'">
+  The renderer to use for particle generation, either default or WebGL.
+</ResponseField>
+
+<ResponseField name="color" type="string" default="#FFF">
+  Hexadecimal color code used for particles. Supports 3 or 6 character hex codes.
+</ResponseField>
+
+<ResponseField name="colorArr" type="number[]">
+  Array of numbers to define multiple particle colors.
+</ResponseField>
+
+<ResponseField name="initPosition" type="'random' | 'top' | 'left' | 'bottom' | 'right' | 'misplaced' | 'none'" default="random">
+  Initial position of the particles when the animation starts.
+</ResponseField>
+
+<ResponseField name="initDirection" type="'random' | 'top' | 'left' | 'bottom' | 'right' | 'none'" default="random">
+  Initial direction of the particles when the animation starts.
+</ResponseField>
+
+<ResponseField name="fadePosition" type="'explode' | 'top' | 'left' | 'bottom' | 'right' | 'random' | 'none'" default="none">
+  Position where the particles fade out.
+</ResponseField>
+
+<ResponseField name="fadeDirection" type="'random' | 'top' | 'left' | 'bottom' | 'right' | 'none'" default="none">
+  Direction in which the particles fade out.
+</ResponseField>
+
+<ResponseField name="noise" type="number">
+  Noise of the particles.
+</ResponseField>
+
+<ResponseField name="responsiveWidth" type="boolean" default="false">
+  Should the canvas be responsive.
+</ResponseField>
+
+## Credits
+
+- Credits to [Nuxt Labs](https://nuxtlabs.com) for this inspiration
+- Credits to [NextParticles](https://nextparticle.nextco.de) for the base of the animation library

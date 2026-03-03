@@ -1,0 +1,41 @@
+---
+title: Scroll Island
+description: A dynamic and interactive component that displays scroll progress with animated visuals and an expandable area for additional content.
+---
+
+## Overview
+
+Scroll Island is a component that displays scroll progress with animated number transitions and an expandable interface for additional content.
+
+## Usage
+
+```vue
+<template>
+  <ScrollIsland
+    title="Progress"
+    :height="44"
+    class="custom-class"
+  >
+    <!-- Additional content goes here -->
+  </ScrollIsland>
+</template>
+```
+
+## API Reference
+
+### Props
+
+| Prop Name | Type     | Default      | Description                                     |
+| --------- | -------- | ------------ | ----------------------------------------------- |
+| `class`   | `string` | `""`         | Additional CSS classes for custom styling.      |
+| `title`   | `string` | `"Progress"` | Title displayed in the header of the component. |
+| `height`  | `string` | `44`         | Height of the component.                        |
+
+## Dependencies
+
+- @number-flow/vue
+
+## Credits
+
+- Inspired by the work of [Ali Samadi](https://x.com/alisamadi__/status/1854312982559502556) & [Nitish Khagwal](https://x.com/nitishkmrk)
+- [NumberFlow by Maxwell Barvian](https://number-flow.barvian.me/vue) for number formatting and animations.

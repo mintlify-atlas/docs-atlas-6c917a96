@@ -1,0 +1,35 @@
+---
+title: "Letter Pullup"
+description: "Staggered letter pull up text animation."
+icon: "arrow-up"
+---
+
+Create staggered letter animations that pull up into view with customizable delays.
+
+## Usage
+
+```vue
+<LetterPullup
+  words="Staggered Letter Pull Up"
+  :delay="0.05"
+/>
+```
+
+## Props
+
+<ParamField path="class" type="string" default="-">
+  The class to be applied to the component.
+</ParamField>
+
+<ParamField path="words" type="string" default="Staggered Letter Pull Up">
+  Text to animate.
+</ParamField>
+
+<ParamField path="delay" type="number" default="0.05">
+  Delay each letter's animation by this many seconds.
+</ParamField>
+
+## Credits
+
+- Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component
+- Inspired from [Magic UI](https://magicui.design/docs/components/letter-pullup)

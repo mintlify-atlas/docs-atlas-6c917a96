@@ -1,0 +1,96 @@
+---
+title: Animated Beam
+description: An SVG beam connecting elements with animation.
+---
+
+## Overview
+
+The Animated Beam component creates an SVG beam that connects elements with smooth animation. It's perfect for visualizing connections, data flow, or relationships between UI elements.
+
+## Usage
+
+```vue
+<AnimatedBeam
+  :containerRef="containerRef"
+  :fromRef="fromRef"
+  :toRef="toRef"
+  :curvature="0"
+  :duration="5"
+  gradientStartColor="#FFAA40"
+  gradientStopColor="#9C40FF"
+/>
+```
+
+## Props
+
+<ResponseField name="class" type="string" default="">
+  Additional CSS classes to apply to the component for customization.
+</ResponseField>
+
+<ResponseField name="containerRef" type="HTMLElement" required>
+  Reference to the container element where the beam is rendered.
+</ResponseField>
+
+<ResponseField name="fromRef" type="HTMLElement" required>
+  Reference to the starting element from which the beam originates.
+</ResponseField>
+
+<ResponseField name="toRef" type="HTMLElement" required>
+  Reference to the ending element where the beam points to.
+</ResponseField>
+
+<ResponseField name="curvature" type="number" default="0">
+  Controls the curvature of the beam; higher values create a more curved path.
+</ResponseField>
+
+<ResponseField name="reverse" type="boolean" default="false">
+  Reverses the animation direction of the beam if set to `true`.
+</ResponseField>
+
+<ResponseField name="pathColor" type="string" default="gray">
+  Color of the beam's path.
+</ResponseField>
+
+<ResponseField name="pathWidth" type="number" default="2">
+  Stroke width of the beam's path.
+</ResponseField>
+
+<ResponseField name="pathOpacity" type="number" default="0.2">
+  Opacity of the beam's path.
+</ResponseField>
+
+<ResponseField name="gradientStartColor" type="string" default="#FFAA40">
+  Starting color of the beam's gradient animation.
+</ResponseField>
+
+<ResponseField name="gradientStopColor" type="string" default="#9C40FF">
+  Ending color of the beam's gradient animation.
+</ResponseField>
+
+<ResponseField name="delay" type="number" default="0">
+  Delay before the beam's animation starts, in seconds.
+</ResponseField>
+
+<ResponseField name="duration" type="number" default="Random between 4–7s">
+  Duration of the beam's animation cycle, in seconds.
+</ResponseField>
+
+<ResponseField name="startXOffset" type="number" default="0">
+  Horizontal offset for the beam's starting point.
+</ResponseField>
+
+<ResponseField name="startYOffset" type="number" default="0">
+  Vertical offset for the beam's starting point.
+</ResponseField>
+
+<ResponseField name="endXOffset" type="number" default="0">
+  Horizontal offset for the beam's ending point.
+</ResponseField>
+
+<ResponseField name="endYOffset" type="number" default="0">
+  Vertical offset for the beam's ending point.
+</ResponseField>
+
+## Credits
+
+Inspired and ported from [Magic UI Animated Beam](https://magicui.design/docs/components/animated-beam).

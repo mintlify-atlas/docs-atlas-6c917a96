@@ -1,0 +1,281 @@
+---
+title: Contributing
+description: Learn how to contribute to Inspira UI and help make this project better for everyone.
+---
+
+Thank you for your interest in contributing to the **Inspira UI** project! Your contributions help make this project better for everyone. Please take a moment to read through these guidelines to ensure a smooth collaboration.
+
+## Getting Started
+
+<Steps>
+  <Step title="Fork the Repository">
+    Create a personal fork of the project on GitHub by visiting the [Inspira UI repository](https://github.com/unovue/inspira-ui).
+  </Step>
+
+  <Step title="Clone Your Fork">
+    Clone your forked repository to your local machine:
+
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/inspira-ui.git
+    cd inspira-ui
+    ```
+  </Step>
+
+  <Step title="Create a Branch">
+    Create a new branch for your contribution:
+
+    ```bash
+    git checkout -b feature/YourFeatureName
+    ```
+  </Step>
+
+  <Step title="Install Dependencies">
+    Run `pnpm install` to install all necessary dependencies:
+
+    ```bash
+    pnpm install
+    ```
+  </Step>
+</Steps>
+
+## Code of Conduct
+
+By participating in this project, you agree to abide by the [Code of Conduct](/code-of-conduct), which aims to foster an open and welcoming environment.
+
+## How to Contribute
+
+### Reporting Bugs
+
+If you find a bug, please open an [issue](https://github.com/unovue/inspira-ui/issues) and include:
+
+- A clear and descriptive title
+- Steps to reproduce the issue
+- Expected and actual results
+- Screenshots or code snippets, if applicable
+
+### Suggesting Enhancements
+
+We welcome suggestions for new features or improvements. Please open an [issue](https://github.com/unovue/inspira-ui/issues) and include:
+
+- A clear and descriptive title
+- A detailed description of the enhancement
+- Any relevant examples or mockups
+
+### Adding New Components
+
+We appreciate contributions that add new components to the library. Please ensure that:
+
+- The component is generally useful and aligns with the project's goals
+- The component is compatible with both **Nuxt** and **Vue**
+- You follow the coding and documentation guidelines outlined below
+- You include unit tests for your component
+
+<Note>
+  **Components Guidelines:**
+
+  1. **Create or Update `index.ts`** - Each folder under `components/content/inspira/ui/<component-folder-name>/` should have an `index.ts` that exports all Vue files.
+
+  2. **Registry Dependencies** - If your component depends on other Inspira UI components, update the `COMPONENT_DEPENDENCIES` map in `~/scripts/crawl-content.ts`.
+
+  3. **Nuxt-Only Features** - If your component uses Nuxt-only features like `<ClientOnly>`, mention this in the documentation.
+
+  4. **Avoid External Components** - Don't use external UI components that aren't part of the core Vue.js ecosystem.
+
+  5. **Explicit Imports** - Always include explicit imports in your component code for Vue.js compatibility.
+
+  6. **Icon Usage** - Use the built-in `<Icon>` component rather than pasting raw SVGs.
+</Note>
+
+## Project Structure
+
+Understanding the project structure is crucial for effective contribution:
+
+<CodeGroup>
+  ```plaintext Components
+  components/content/inspira/
+  ├── ui/
+  │   └── <component-folder-name>/
+  │       ├── index.ts          # Exports all components
+  │       └── Component.vue     # Main component file
+  └── examples/
+      └── <component-folder-name>/
+          └── ComponentDemo.vue # Demo/example component
+  ```
+
+  ```plaintext Documentation
+  content/2.components/
+  └── <category>/
+      └── component-name.md     # Component documentation
+  ```
+</CodeGroup>
+
+## Style Guidelines
+
+### Coding Standards
+
+- **Language**: All components should be written in **Vue.js** with TypeScript support
+- **Styling**: Use **Tailwind CSS** classes for styling whenever possible
+- **Naming Conventions**: Use `PascalCase` for component names and filenames
+
+### Component Format
+
+Your Vue components should adhere to the following structure:
+
+<CodeGroup>
+  ```vue Template
+  <script lang="ts" setup>
+  // Your script code goes here
+  </script>
+
+  <template>
+    <!-- Your template code goes here -->
+  </template>
+
+  <style scoped>
+  /* Your styles go here */
+  </style>
+  ```
+
+  ```typescript Props (Vue 3.5+)
+  interface Props {
+    msg?: string;
+    labels?: string[];
+  }
+
+  const { msg = "hello", labels = ["one", "two"] } = defineProps<Props>();
+  ```
+
+  ```typescript Constants
+  import type { ObjectValues } from "@/lib/utils";
+
+  export const COMPONENT_NAME_DIRECTION = {
+    Top: 'top',
+    Bottom: 'bottom'
+  } as const;
+
+  export type ComponentNameDirection = ObjectValues<typeof COMPONENT_NAME_DIRECTION>;
+  ```
+</CodeGroup>
+
+<Warning>
+  **Important Notes:**
+  - Use `<script lang="ts" setup>` for TypeScript and the Composition API
+  - Keep styles scoped to prevent conflicts
+  - Ensure compatibility with both **Nuxt** and **Vue**
+  - Never use Enums; use `{} as const` instead
+  - Constants must be `CAPS_CAMEL_CASE` with a prefix
+</Warning>
+
+### Commit Messages
+
+Use the [Conventional Commits](https://www.conventionalcommits.org/) format:
+
+- Begin with a type (`feat`, `fix`, `docs`, etc.) followed by a short description
+- Example: `feat: add TextHoverEffect component`
+
+## Documentation Guidelines
+
+### Single-File Components
+
+For components contained within a single `.vue` file:
+
+<Steps>
+  <Step title="Front Matter">
+    Begin with YAML front matter:
+
+    ```yaml
+    ---
+    title: Your Component Title
+    description: A brief description of what your component does.
+    ---
+    ```
+  </Step>
+
+  <Step title="Preview Section">
+    Use the `ComponentLoader` to display a live preview:
+
+    ```markdown
+    ::ComponentLoader{label="Preview" componentName="YourComponentDemo" type="examples" id="your-component-folder-name"}
+    ::
+    ```
+  </Step>
+
+  <Step title="Installation Instructions">
+    Include both CLI and manual installation:
+
+    ```markdown
+    ## Install using CLI
+
+    ::InstallationCli{componentId="your-component-folder-name"}
+    ::
+
+    ## Install Manually
+
+    ::CodeViewer{filename="YourComponent.vue" language="vue" componentName="YourComponent" type="ui" id="your-component-folder-name"}
+    ::
+    ```
+  </Step>
+
+  <Step title="API Documentation">
+    Provide a table listing all props:
+
+    ```markdown
+    ## API
+
+    | Prop Name | Type     | Default | Description           |
+    | --------- | -------- | ------- | --------------------- |
+    | `prop1`   | `string` | `''`    | Description of prop1. |
+    ```
+  </Step>
+</Steps>
+
+### Multi-File Components
+
+For components consisting of multiple files:
+
+<Tip>
+  Use a `::code-group` to group multiple `CodeViewerTab` components, one for each file.
+</Tip>
+
+```markdown
+## Install Manually
+
+Copy and paste the following code in the same folder:
+
+::code-group
+
+:CodeViewerTab{label="MainComponent.vue" language="vue" componentName="MainComponent" type="ui" id="your-component-folder-name"}
+:CodeViewerTab{filename="index.ts" language="typescript" componentName="index" type="ui" id="your-component-folder-name" extension="ts"}
+
+::
+```
+
+## Testing
+
+<CardGroup cols={3}>
+  <Card title="Unit Tests" icon="vial">
+    Write unit tests for your component if applicable to ensure functionality.
+  </Card>
+  <Card title="Cross-Environment" icon="laptop-mobile">
+    Test your component in both **Nuxt** and **Vue** environments.
+  </Card>
+  <Card title="Visual Testing" icon="eye">
+    Check the component visually to ensure it renders correctly.
+  </Card>
+</CardGroup>
+
+### CLI Installation Testing
+
+After updating the registry with `pnpm build:registry`, test the component installation:
+
+```bash
+npx shadcn-vue@latest add "https://localhost:3000/r/<component-name>"
+```
+
+## License
+
+By contributing, you agree that your contributions will be licensed under the [MIT License](https://github.com/unovue/inspira-ui/blob/main/LICENSE).
+
+<Info>
+  For more detailed information, check out the full [CONTRIBUTING.md](https://github.com/unovue/inspira-ui/blob/main/CONTRIBUTING.md) file in the repository.
+</Info>

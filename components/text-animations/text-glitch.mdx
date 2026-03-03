@@ -1,0 +1,46 @@
+---
+title: "Text Glitch"
+description: "Creates a vibrant glitch effect on text with customizable speed, shadow colors, and optional hover-triggered animation."
+icon: "shuffle"
+---
+
+Create vibrant glitch effects with customizable speed and shadow colors.
+
+## Usage
+
+```vue
+<TextGlitch
+  text="Glitch Effect"
+  :speed="0.5"
+  :enableShadows="true"
+  :enableOnHover="false"
+/>
+```
+
+## Props
+
+<ParamField path="text" type="string" default="">
+  The text content to display with the glitch effect.
+</ParamField>
+
+<ParamField path="speed" type="number" default="0.5">
+  Controls the animation speed of the glitch effect in seconds.
+</ParamField>
+
+<ParamField path="enableShadows" type="boolean" default="true">
+  Toggles colored shadows that enhance the glitch look.
+</ParamField>
+
+<ParamField path="enableOnHover" type="boolean" default="false">
+  If true, glitch animation activates only on hover.
+</ParamField>
+
+<ParamField path="class" type="string" default="undefined">
+  Additional CSS classes for the container div.
+</ParamField>
+
+## Credits
+
+Inspired and developed using resources from the following YouTube videos:
+- https://www.youtube.com/watch?v=7Xyg8Ja7dyY
+- https://www.youtube.com/watch?v=9CCkp_El1So

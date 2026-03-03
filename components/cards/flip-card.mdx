@@ -1,0 +1,56 @@
+---
+title: Flip Card
+description: A dynamic flip card with smooth 180-degree flipping animations along both the X and Y axes, providing an engaging and interactive visual effect.
+---
+
+A dynamic flip card with smooth 180-degree flipping animations along both the X and Y axes. Perfect for creating engaging, interactive cards that reveal additional content on flip.
+
+## Installation
+
+```bash
+npx inspira-ui add flip-card
+```
+
+## Usage
+
+```vue
+<template>
+  <FlipCard rotate="y" class="w-64 h-64">
+    <!-- Front side -->
+    <template #default>
+      <div class="flex items-center justify-center h-full bg-blue-500 text-white">
+        <h3>Front Side</h3>
+      </div>
+    </template>
+    
+    <!-- Back side -->
+    <template #back>
+      <div class="flex items-center justify-center h-full bg-purple-500 text-white">
+        <h3>Back Side</h3>
+      </div>
+    </template>
+  </FlipCard>
+</template>
+
+<script setup>
+import { FlipCard } from '@/components/ui/flip-card'
+</script>
+```
+
+## Props
+
+| Prop Name | Type     | Default | Description                                |
+| --------- | -------- | ------- | ------------------------------------------ |
+| `class`   | `string` | `-`     | The class to be applied to the component.  |
+| `rotate`  | `x \| y` | `y`     | You can pass the rotate value as you want. |
+
+## Slots
+
+| Slot Name | Description                 |
+| --------- | --------------------------- |
+| `default` | Component to show as front. |
+| `back`    | Component to show as back.  |
+
+## Credits
+
+Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.

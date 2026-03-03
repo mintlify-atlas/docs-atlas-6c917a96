@@ -1,0 +1,41 @@
+---
+title: "Text Generate Effect"
+description: "A cool text effect that fades in text on page load, one by one."
+icon: "wand-sparkles"
+---
+
+Create elegant text generation effects that fade in words sequentially.
+
+## Usage
+
+```vue
+<TextGenerateEffect
+  words="Your text to generate"
+  :duration="0.7"
+  :delay="0"
+  :filter="true"
+/>
+```
+
+## Props
+
+<ParamField path="words" type="string" required>
+  The text to be displayed with the generating effect.
+</ParamField>
+
+<ParamField path="duration" type="number" default="0.7">
+  The duration of the text generation animation in seconds.
+</ParamField>
+
+<ParamField path="delay" type="number" default="0">
+  The delay before the text generation animation starts in milliseconds.
+</ParamField>
+
+<ParamField path="filter" type="boolean" default="true">
+  The blur of the text.
+</ParamField>
+
+## Credits
+
+- Credits to [M Atif](https://github.com/atif0075) for porting this component
+- Ported from [Aceternity UI's Text Generate Effect](https://ui.aceternity.com/components/text-generate-effect)

@@ -1,0 +1,57 @@
+---
+title: Gradient Button
+description: A stylish animated button with a rotating conic gradient border and customizable properties for a vibrant look.
+---
+
+## Usage
+
+The Gradient Button is a visually striking component that features an animated rotating conic gradient border. It's perfect for creating eye-catching call-to-action buttons or highlighting important interactive elements.
+
+```vue
+<GradientButton>
+  Click Me
+</GradientButton>
+```
+
+## Props
+
+| Prop Name      | Type       | Default              | Description                                                  |
+| -------------- | ---------- | -------------------- | ------------------------------------------------------------ |
+| `borderWidth`  | `number`   | `2`                  | Width of the gradient border in pixels.                      |
+| `colors`       | `string[]` | Rainbow Colors Array | Array of colors used in the conic gradient border.           |
+| `duration`     | `number`   | `2500`               | Duration of the gradient rotation animation in milliseconds. |
+| `borderRadius` | `number`   | `8`                  | Border radius for rounded corners in pixels.                 |
+| `blur`         | `number`   | `4`                  | Blur intensity of the gradient border effect in pixels.      |
+| `class`        | `string`   | `""`                 | Additional CSS classes for custom styling.                   |
+| `bgColor`      | `string`   | `"#000"`             | Background color of the button content.                      |
+
+## Examples
+
+### Custom Colors
+
+```vue
+<GradientButton :colors="['#ff0000', '#00ff00', '#0000ff']">
+  Custom Gradient
+</GradientButton>
+```
+
+### Custom Animation Duration
+
+```vue
+<GradientButton :duration="5000">
+  Slow Rotation
+</GradientButton>
+```
+
+### Custom Border and Styling
+
+```vue
+<GradientButton 
+  :borderWidth="4" 
+  :borderRadius="16" 
+  :blur="8"
+  bgColor="#1a1a1a"
+>
+  Thick Border
+</GradientButton>
+```

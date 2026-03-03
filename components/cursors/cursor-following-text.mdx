@@ -1,0 +1,87 @@
+---
+title: Smooth Cursor
+description: A customizable, physics-based smooth cursor animation component that follows mouse movement with spring physics.
+---
+
+A physics-based cursor component that creates smooth, natural-feeling animations as it follows the user's mouse movement. Built with Vue 3 and customizable spring physics.
+
+## Installation
+
+<Steps>
+  <Step title="Install dependencies">
+    This component works out of the box with no additional dependencies.
+  </Step>
+  
+  <Step title="Copy component code">
+    Add the `SmoothCursor.vue` component to your project.
+  </Step>
+</Steps>
+
+## Usage
+
+```vue
+<template>
+  <SmoothCursor />
+</template>
+
+<script setup>
+import SmoothCursor from '@/components/inspira/ui/SmoothCursor.vue'
+</script>
+```
+
+### Custom Cursor Component
+
+```vue
+<template>
+  <SmoothCursor :cursor="CustomCursorComponent" />
+</template>
+
+<script setup>
+import SmoothCursor from '@/components/inspira/ui/SmoothCursor.vue'
+import CustomCursorComponent from '@/components/CustomCursor.vue'
+</script>
+```
+
+### Custom Spring Configuration
+
+```vue
+<template>
+  <SmoothCursor :springConfig="customSpring" />
+</template>
+
+<script setup>
+import SmoothCursor from '@/components/inspira/ui/SmoothCursor.vue'
+
+const customSpring = {
+  damping: 20,
+  stiffness: 200,
+  mass: 0.5,
+  restDelta: 0.001
+}
+</script>
+```
+
+## Props
+
+<ResponseField name="cursor" type="Component" default="DefaultCursor">
+  Custom cursor component to replace the default cursor.
+</ResponseField>
+
+<ResponseField name="springConfig" type="SpringConfig">
+  Configuration object for the spring animation behavior.
+  
+  **SpringConfig Type:**
+  ```ts
+  interface SpringConfig {
+    damping: number;      // Controls oscillation damping
+    stiffness: number;    // Spring stiffness
+    mass: number;         // Virtual mass of the cursor
+    restDelta: number;    // Threshold for spring to be at rest
+  }
+  ```
+</ResponseField>
+
+## Credits
+
+- Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component
+- Ported from [Magic UI Smooth Cursor](https://magicui.design/docs/components/smooth-cursor)

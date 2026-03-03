@@ -1,0 +1,119 @@
+---
+title: Apple Card Carousel
+description: A sleek, Apple-style card carousel with blur-loading images, modal expansion, and smooth scrolling controls.
+---
+
+A sleek, Apple-style card carousel with blur-loading images, modal expansion, and smooth scrolling controls. Reproduces the interactive "App Store / Apple TV" browsing experience.
+
+## Installation
+
+```bash
+npx inspira-ui add apple-card-carousel
+```
+
+## Usage
+
+```vue
+<template>
+  <AppleCardCarousel>
+    <AppleCarouselItem :index="0">
+      <AppleCard :card="card1" :index="0">
+        <p>Extended content for card 1</p>
+      </AppleCard>
+    </AppleCarouselItem>
+    <AppleCarouselItem :index="1">
+      <AppleCard :card="card2" :index="1">
+        <p>Extended content for card 2</p>
+      </AppleCard>
+    </AppleCarouselItem>
+  </AppleCardCarousel>
+</template>
+
+<script setup>
+import {
+  AppleCardCarousel,
+  AppleCarouselItem,
+  AppleCard,
+} from '@/components/ui/apple-card-carousel'
+
+const card1 = {
+  src: '/image1.jpg',
+  title: 'Card Title',
+  category: 'Category',
+}
+
+const card2 = {
+  src: '/image2.jpg',
+  title: 'Another Card',
+  category: 'Category',
+}
+</script>
+```
+
+## Components
+
+The Apple Carousel suite is composed of four inter-related components:
+
+| Component           | Purpose                                                                  |
+| ------------------- | ------------------------------------------------------------------------ |
+| `AppleCardCarousel` | The horizontal scroll container with left / right controls.              |
+| `AppleCarouselItem` | A wrapper that adds enter-animation and spacing to each card.            |
+| `AppleCard`         | A richly styled, clickable card that can expand into a fullscreen modal. |
+| `AppleBlurImage`    | An `<img>` replacement that starts blurred until the image loads.        |
+
+### AppleCardCarousel
+
+#### Props
+
+| Prop            | Type     | Default | Description                                        |
+| --------------- | -------- | ------- | -------------------------------------------------- |
+| `initialScroll` | `number` | `0`     | Horizontal scroll offset applied on mount (in px). |
+
+#### Slots
+
+The default slot should contain one or more `AppleCarouselItem` components.
+
+### AppleCarouselItem
+
+#### Props
+
+| Prop    | Type     | Required | Description                                             |
+| ------- | -------- | -------- | ------------------------------------------------------- |
+| `index` | `number` | ✓        | Zero-based index; used to stagger the appear animation. |
+
+#### Slots
+
+Default slot — place an `AppleCard` here.
+
+### AppleCard
+
+#### Props
+
+| Prop     | Type                                               | Required | Default | Description                           |
+| -------- | -------------------------------------------------- | -------- | ------- | ------------------------------------- |
+| `card`   | `{ src: string; title: string; category: string }` | ✓        | —       | Data object for the card.             |
+| `index`  | `number`                                           | ✓        | —       | Position within the carousel.         |
+| `layout` | `boolean`                                          | ✕        | `false` | Enables shared-layout FLIP animation. |
+
+#### Slots
+
+When the card is expanded (modal open) the default slot renders inside the modal body; you can inject extended content such as text, images, or videos.
+
+### AppleBlurImage
+
+#### Props
+
+| Prop     | Type               | Default                          | Description                                                    |
+| -------- | ------------------ | -------------------------------- | -------------------------------------------------------------- |
+| `src`    | `string`           | **—**                            | Image source URL. _Required._                                  |
+| `alt`    | `string`           | "Background of a beautiful view" | Alt text.                                                      |
+| `width`  | `number \| string` | _img natural_                    | Width attribute; omitted when using `fill`.                    |
+| `height` | `number \| string` | _img natural_                    | Height attribute; omitted when using `fill`.                   |
+| `fill`   | `boolean`          | `false`                          | If `true`, sets `width:100%; height:100%` via utility classes. |
+| `class`  | `string`           | `""`                             | Additional classes merged via `cn()`.                          |
+
+When the image fires the native `load` event it gracefully transitions from `blur-sm` to no-blur.
+
+## Credits
+
+Ported from [Aceternity UI Apple Card Carousel](https://ui.aceternity.com/components/apple-cards-carousel).

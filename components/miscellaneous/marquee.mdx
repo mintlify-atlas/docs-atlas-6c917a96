@@ -1,0 +1,46 @@
+---
+title: Marquee
+description: A customizable scrolling component that loops its content horizontally or vertically, with configurable direction, hover pause, and repeat options.
+---
+
+## Overview
+
+Marquee is a customizable scrolling component that continuously loops content. Supports both horizontal and vertical scrolling with pause on hover and configurable repetition.
+
+## Usage
+
+```vue
+<template>
+  <Marquee
+    :reverse="false"
+    :pauseOnHover="true"
+    :vertical="false"
+    :repeat="4"
+  >
+    <ReviewCard v-for="item in items" :key="item.id" :item="item" />
+  </Marquee>
+</template>
+```
+
+## API Reference
+
+### Props
+
+| Prop Name      | Type      | Default | Description                                                               |
+| -------------- | --------- | ------- | ------------------------------------------------------------------------- |
+| `class`        | `string`  | `''`    | Custom CSS classes to apply to the outermost container of the marquee.    |
+| `reverse`      | `boolean` | `false` | Sets the scrolling direction to reverse (right to left or bottom to top). |
+| `pauseOnHover` | `boolean` | `false` | Pauses the marquee animation when hovered.                                |
+| `vertical`     | `boolean` | `false` | Sets the scrolling direction to vertical instead of horizontal.           |
+| `repeat`       | `number`  | `4`     | Number of times the content inside the marquee should be repeated.        |
+
+## CSS Variables
+
+You can customize the speed and gap between the items by setting the following CSS variables:
+
+- **`--duration`**: Controls the speed of the marquee animation.
+- **`--gap`**: Sets the space between repeated items in the marquee.
+
+## Credits
+
+- Inspired by [Magic UI](https://magicui.design/docs/components/marquee).

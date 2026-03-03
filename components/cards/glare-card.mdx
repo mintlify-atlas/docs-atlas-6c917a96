@@ -1,0 +1,38 @@
+---
+title: Glare Card
+description: A glare effect that happens on hover, as seen on Linear's website.
+---
+
+A card component featuring a glare effect that activates on hover, creating a subtle light reflection across the card surface. Inspired by Linear's website design.
+
+## Installation
+
+```bash
+npx inspira-ui add glare-card
+```
+
+## Usage
+
+```vue
+<template>
+  <GlareCard class="p-6">
+    <h3>Card Title</h3>
+    <p>Hover over this card to see the glare effect.</p>
+  </GlareCard>
+</template>
+
+<script setup>
+import { GlareCard } from '@/components/ui/glare-card'
+</script>
+```
+
+## Props
+
+| Prop Name | Type     | Default | Description                                               |
+| --------- | -------- | ------- | --------------------------------------------------------- |
+| `class`   | `string` | `-`     | Additional Tailwind CSS class names to apply to the card. |
+
+## Credits
+
+- Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
+- Inspired from [Aceternity UI](https://ui.aceternity.com/components/glare-card).

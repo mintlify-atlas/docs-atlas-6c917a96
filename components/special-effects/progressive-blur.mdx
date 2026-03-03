@@ -1,0 +1,49 @@
+---
+title: Progressive Blur
+description: A layered backdrop blur effect that gradually increases intensity in a chosen direction, perfect for depth, focus, and visual separation.
+---
+
+## Overview
+
+The Progressive Blur component creates a layered backdrop blur effect that gradually increases in intensity in a chosen direction. It's perfect for creating depth, focus, and visual separation in your UI.
+
+## Usage
+
+```vue
+<ProgressiveBlur
+  direction="bottom"
+  :blurLayers="8"
+  :blurIntensity="0.25"
+>
+  <div class="p-8">
+    Your content with progressive blur
+  </div>
+</ProgressiveBlur>
+```
+
+## Props
+
+<ResponseField name="direction" type="'top' | 'right' | 'bottom' | 'left'" default="bottom">
+  Direction in which the blur progressively increases.
+</ResponseField>
+
+<ResponseField name="blurLayers" type="number" default="8">
+  Number of blur layers used to create the progressive effect.
+</ResponseField>
+
+<ResponseField name="blurIntensity" type="number" default="0.25">
+  Blur strength multiplier per layer (in pixels).
+</ResponseField>
+
+<ResponseField name="class" type="string" default="">
+  Optional class applied to the wrapper container.
+</ResponseField>
+
+<Note>
+  This component also accepts all valid `motion-v` props for a `div`.
+</Note>
+
+## Credits
+
+- Ported from [Motion Primitives Progressive Blur](https://motion-primitives.com/docs/progressive-blur)
+- Powered by `motion-v`

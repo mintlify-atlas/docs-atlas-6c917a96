@@ -1,0 +1,43 @@
+---
+title: Photo Gallery
+description: Showcase your team with pride using our stunning Photo Gallery Component.
+---
+
+## Overview
+
+Photo Gallery is a component designed to showcase images in an elegant, animated layout. Perfect for displaying team photos, portfolios, or image collections.
+
+## Usage
+
+```vue
+<template>
+  <PhotoGallery
+    :items="photos"
+    containerClass="custom-container"
+    class="custom-gallery"
+  />
+</template>
+
+<script setup>
+const photos = [
+  { src: '/photo1.jpg' },
+  { src: '/photo2.jpg' },
+  { src: '/photo3.jpg' }
+]
+</script>
+```
+
+## API Reference
+
+### Props
+
+| Prop Name        | Type                | Default | Description                                            |
+| ---------------- | ------------------- | ------- | ------------------------------------------------------ |
+| `items`          | `"[{src: string}]"` | `[]`    | Pass items / image src to animate                      |
+| `containerClass` | `string`            | `""`    | Additional tailwind CSS classes for container styling. |
+| `class`          | `string`            | `""`    | Additional tailwind CSS classes for custom styling.    |
+
+## Credits
+
+- All images from [Pexels](https://www.pexels.com/@soldiervip/)
+- Thanks to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for providing this component.

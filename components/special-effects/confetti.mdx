@@ -1,0 +1,132 @@
+---
+title: Confetti
+description: A Vue component for confetti animations.
+---
+
+## Overview
+
+The Confetti component provides a fun and engaging way to celebrate user actions with customizable confetti animations. Built using the canvas-confetti library, it offers extensive customization options.
+
+## Installation
+
+This component requires additional dependencies:
+
+```bash
+npm install canvas-confetti
+npm install -D @types/canvas-confetti
+```
+
+## Usage
+
+### Basic Confetti
+
+```vue
+<Confetti :options="{ particleCount: 100, spread: 70 }" />
+```
+
+### Confetti Button
+
+```vue
+<ConfettiButton :options="{ particleCount: 150 }">
+  Click me!
+</ConfettiButton>
+```
+
+## Confetti Component Props
+
+<ResponseField name="options" type="ConfettiOptions" default="{}">
+  Options for individual confetti bursts.
+</ResponseField>
+
+<ResponseField name="globalOptions" type="ConfettiGlobalOptions" default="{}">
+  Global options for the confetti instance (e.g., resize behavior).
+</ResponseField>
+
+<ResponseField name="manualstart" type="boolean" default="false">
+  If `true`, confetti won't start automatically on mount.
+</ResponseField>
+
+## Confetti Options
+
+<ResponseField name="particleCount" type="number" default="50">
+  The number of confetti particles to launch.
+</ResponseField>
+
+<ResponseField name="angle" type="number" default="90">
+  The angle in degrees at which to launch the confetti.
+</ResponseField>
+
+<ResponseField name="spread" type="number" default="45">
+  The spread in degrees of the confetti.
+</ResponseField>
+
+<ResponseField name="startVelocity" type="number" default="45">
+  The initial velocity of the confetti particles.
+</ResponseField>
+
+<ResponseField name="decay" type="number" default="0.9">
+  The rate at which confetti particles slow down.
+</ResponseField>
+
+<ResponseField name="gravity" type="number" default="1">
+  The gravity applied to confetti particles.
+</ResponseField>
+
+<ResponseField name="drift" type="number" default="0">
+  The horizontal drift applied to confetti particles.
+</ResponseField>
+
+<ResponseField name="ticks" type="number" default="200">
+  The number of animation frames the confetti should last.
+</ResponseField>
+
+<ResponseField name="origin" type="{ x: number, y: number }" default="{ x: 0.5, y: 0.5 }">
+  The origin point (from 0 to 1) of the confetti emission.
+</ResponseField>
+
+<ResponseField name="colors" type="string[]" default="['#26ccff', '#a25afd', '#ff5e7e', '#88ff5a', '#fcff42', '#ffa62d', '#ff36ff']">
+  Array of color strings in HEX format for the confetti particles.
+</ResponseField>
+
+<ResponseField name="shapes" type="string[]" default="['square', 'circle']">
+  Array of shapes for the confetti particles.
+</ResponseField>
+
+<ResponseField name="scalar" type="number" default="1">
+  Scaling factor for confetti particle sizes.
+</ResponseField>
+
+<ResponseField name="zIndex" type="number" default="100">
+  The z-index value for the confetti canvas element.
+</ResponseField>
+
+<ResponseField name="disableForReducedMotion" type="boolean" default="false">
+  Disables confetti for users who prefer reduced motion.
+</ResponseField>
+
+<ResponseField name="useWorker" type="boolean" default="true">
+  Use a Web Worker for better performance.
+</ResponseField>
+
+<ResponseField name="resize" type="boolean" default="true">
+  Whether to automatically resize the canvas when the window resizes.
+</ResponseField>
+
+<ResponseField name="canvas" type="HTMLCanvasElement | null" default="null">
+  Custom canvas element to draw confetti on.
+</ResponseField>
+
+<ResponseField name="flat" type="boolean" default="false">
+  If `true`, confetti particles will be flat (no rotation or 3D effect).
+</ResponseField>
+
+## ConfettiButton Props
+
+<ResponseField name="options" type="ConfettiOptions & { canvas?: HTMLCanvasElement }" default="{}">
+  Options for confetti when the button is clicked.
+</ResponseField>
+
+## Credits
+
+- Built using the [canvas-confetti](https://www.npmjs.com/package/canvas-confetti) library
+- Ported from [Magic UI Confetti](https://magicui.design/docs/components/confetti)

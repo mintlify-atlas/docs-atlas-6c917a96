@@ -1,0 +1,50 @@
+---
+title: "Spinning Text"
+description: "The Spinning Text component animates text in a circular motion with customizable speed, direction, color, and transitions for dynamic and engaging effects."
+icon: "circle-notch"
+---
+
+Animate text in a circular motion with customizable speed, direction, and radius.
+
+## Usage
+
+```vue
+<SpinningText
+  :duration="10"
+  :reverse="false"
+  :radius="5"
+>
+  Spinning Text Around
+</SpinningText>
+```
+
+## Props
+
+<ParamField path="duration" type="number" default="10">
+  The duration of the full circular rotation animation.
+</ParamField>
+
+<ParamField path="reverse" type="boolean" default="false">
+  Determines if the animation should rotate in reverse.
+</ParamField>
+
+<ParamField path="radius" type="number" default="5">
+  The radius of the circular path for the text animation.
+</ParamField>
+
+<ParamField path="transition" type="motion-v Transition" default="">
+  Custom transition effects for the animation.
+</ParamField>
+
+<ParamField path="variants" type="{container: motion-v Variant, item: motion-v Variant}" default="">
+  Variants for container and item animations.
+</ParamField>
+
+<ParamField path="class" type="string" default="">
+  A custom class name for the text container.
+</ParamField>
+
+## Credits
+
+- Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component
+- Ported from [Magic UI Spinning Text](https://magicui.design/docs/components/spinning-text)

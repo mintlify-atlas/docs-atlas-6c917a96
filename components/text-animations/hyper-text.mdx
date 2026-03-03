@@ -1,0 +1,40 @@
+---
+title: "Hyper Text"
+description: "A hyper changing text animation as you hover."
+icon: "bolt"
+---
+
+Create dynamic text that scrambles and reforms on hover with smooth transitions.
+
+## Usage
+
+```vue
+<HyperText
+  text="Hover me!"
+  :duration="0.8"
+  :animateOnLoad="true"
+/>
+```
+
+## Props
+
+<ParamField path="class" type="string" default="">
+  Additional CSS classes to apply to the component.
+</ParamField>
+
+<ParamField path="text" type="string" required>
+  Text to animate.
+</ParamField>
+
+<ParamField path="duration" type="number" default="0.8">
+  The total duration (in seconds) for the entire animation.
+</ParamField>
+
+<ParamField path="animateOnLoad" type="boolean" default="true">
+  Play animation on load.
+</ParamField>
+
+## Credits
+
+- Inspired by [Magic UI's Hyper Text](https://magicui.design/docs/components/hyper-text) component
+- Credits to [Prem](https://github.com/premdasvm) for porting this component

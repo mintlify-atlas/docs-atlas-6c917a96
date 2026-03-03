@@ -1,0 +1,41 @@
+---
+title: Orbit
+description: A component that animates content in a circular orbit, with customizable duration, delay, and radius. It also offers an optional orbit path display.
+---
+
+A component that animates content in a circular orbit, with customizable duration, delay, and radius. It also offers an optional orbit path display.
+
+## Usage
+
+```vue
+<script setup lang="ts">
+import { Orbit, ORBIT_DIRECTION } from '@/components/visualization'
+</script>
+
+<template>
+  <Orbit 
+    :direction="ORBIT_DIRECTION.NORMAL" 
+    :duration="20" 
+    :delay="10" 
+    :radius="50" 
+    :path="true"
+  >
+    <div class="w-8 h-8 rounded-full bg-blue-500" />
+  </Orbit>
+</template>
+```
+
+## Props
+
+| Prop Name   | Type                  | Default  | Description                                                           |
+| ----------- | --------------------- | -------- | --------------------------------------------------------------------- |
+| `direction` | `normal` \| `reverse` | `normal` | The direction of the orbit. You can use the constant ORBIT_DIRECTION. |
+| `duration`  | `?number`             | `20`     | The duration of the orbit animation in seconds.                       |
+| `delay`     | `?number`             | `10`     | Delay in seconds before the animation starts.                         |
+| `radius`    | `?number`             | `50`     | Radius of the orbit path in pixels.                                   |
+| `path`      | `?boolean`            | `false`  | Displays a circle path for the orbit if `true`.                       |
+
+## Credits
+
+- Inspired by [Magic UI](https://magicui.design/docs/components/orbiting-circles)
+- Credits to [Nathan De Pachtere](https://nathandepachtere.com/) for updating this component

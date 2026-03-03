@@ -1,0 +1,63 @@
+---
+title: Scratch to Reveal
+description: The ScratchToReveal component creates an interactive scratch-off effect with customizable dimensions and animations, revealing hidden content beneath.
+---
+
+## Overview
+
+The Scratch to Reveal component creates an interactive scratch-off effect similar to lottery tickets. Users can scratch away the surface to reveal hidden content beneath with customizable completion thresholds and gradient colors.
+
+## Usage
+
+```vue
+<ScratchToReveal
+  :width="300"
+  :height="200"
+  :minScratchPercentage="50"
+  :gradientColors="['#A97CF8', '#F38CB8', '#FDCC92']"
+  @complete="handleComplete"
+>
+  <div class="text-center">
+    You won a prize!
+  </div>
+</ScratchToReveal>
+```
+
+## Props
+
+<ResponseField name="class" type="string" default="">
+  The class name to apply to the component.
+</ResponseField>
+
+<ResponseField name="width" type="number" required>
+  Width of the scratch container.
+</ResponseField>
+
+<ResponseField name="height" type="number" required>
+  Height of the scratch container.
+</ResponseField>
+
+<ResponseField name="minScratchPercentage" type="number" default="50">
+  Minimum percentage of scratched area to be considered as completed (Value between 0 and 100).
+</ResponseField>
+
+<ResponseField name="gradientColors" type="[string, string, string]" required>
+  Gradient colors for the scratch effect.
+</ResponseField>
+
+## Events
+
+<ResponseField name="complete" type="void">
+  Callback function called when scratch is completed.
+</ResponseField>
+
+## Slots
+
+<ResponseField name="default">
+  The content to be revealed below the scratch-off ticket.
+</ResponseField>
+
+## Credits
+
+- Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component
+- Inspired by [MagicUI Scratch To Reveal](https://magicui.design/docs/components/scratch-to-reveal)

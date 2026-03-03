@@ -1,0 +1,110 @@
+---
+title: Stars Background
+description: A parallax-animated starfield background with layered motion and randomized star positions that creates an immersive cosmic effect.
+---
+
+A dynamic starfield background component featuring parallax scrolling and mouse tracking. Perfect for creating engaging hero sections or immersive background effects.
+
+## Installation
+
+<Steps>
+  <Step title="Install dependencies">
+    This component uses Motion-v for animations. Install it if you haven't already:
+    ```bash
+    npm install motion-v
+    ```
+  </Step>
+  
+  <Step title="Copy component code">
+    Add the `StarsBackground.vue` component to your project.
+  </Step>
+</Steps>
+
+## Usage
+
+### Basic Usage
+
+```vue
+<template>
+  <StarsBackground>
+    <div class="relative z-10">
+      <h1>Your Content Here</h1>
+    </div>
+  </StarsBackground>
+</template>
+
+<script setup>
+import StarsBackground from '@/components/inspira/ui/StarsBackground.vue'
+</script>
+```
+
+### Custom Star Color
+
+```vue
+<template>
+  <StarsBackground starColor="#00d8ff">
+    <div class="relative z-10">
+      <h1>Cyan Stars</h1>
+    </div>
+  </StarsBackground>
+</template>
+```
+
+### Adjust Animation Speed
+
+```vue
+<template>
+  <StarsBackground :speed="30" :factor="0.1">
+    <div class="relative z-10">
+      <h1>Faster Stars</h1>
+    </div>
+  </StarsBackground>
+</template>
+```
+
+### Custom Spring Transition
+
+```vue
+<template>
+  <StarsBackground :transition="{ stiffness: 100, damping: 30 }">
+    <div class="relative z-10">
+      <h1>Smoother Motion</h1>
+    </div>
+  </StarsBackground>
+</template>
+```
+
+## Props
+
+<ResponseField name="factor" type="number" default="0.05">
+  Multiplier for mouse parallax movement. Higher values create more pronounced parallax effects.
+</ResponseField>
+
+<ResponseField name="speed" type="number" default="50">
+  Base speed (in seconds) for vertical looping animation of star layers. Lower values make stars move faster.
+</ResponseField>
+
+<ResponseField name="transition" type="SpringOptions" default="{ stiffness: 50, damping: 20 }">
+  Spring physics configuration for smooth motion response to cursor movement.
+</ResponseField>
+
+<ResponseField name="starColor" type="string" default="#fff">
+  Color of the stars. Accepts any valid CSS color value (hex, rgb, hsl, etc.).
+</ResponseField>
+
+<ResponseField name="class" type="string">
+  Optional additional classes for the container div. Useful for controlling z-index or positioning.
+</ResponseField>
+
+## Features
+
+- **Parallax Effect**: Stars move at different speeds based on cursor position
+- **Layered Animation**: Multiple star layers create depth
+- **Randomized Positions**: Stars are randomly distributed for natural appearance
+- **Slot Support**: Wrap your content inside for easy composition
+- **Customizable Colors**: Use any color to match your design
+- **Smooth Physics**: Spring-based animations for natural motion
+
+## Credits
+
+- Ported from [Animate UI](https://animate-ui.com/docs/backgrounds/stars)

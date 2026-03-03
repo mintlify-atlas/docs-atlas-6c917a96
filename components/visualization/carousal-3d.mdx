@@ -1,0 +1,47 @@
+---
+title: 3D Carousel
+description: A dynamic and interactive 3D carousel component using Three.js and Motion-V, allowing smooth infinite rotation and user-controlled interactions.
+---
+
+A dynamic and interactive 3D carousel component using Three.js and Motion-V, allowing smooth infinite rotation and user-controlled interactions.
+
+## Installation
+
+```bash
+npm install three motion-v
+```
+
+## Usage
+
+```vue
+<script setup lang="ts">
+import { Carousel3D } from '@/components/visualization'
+
+const items = [
+  '/image1.jpg',
+  '/image2.jpg',
+  '/image3.jpg',
+  '/image4.jpg',
+]
+</script>
+
+<template>
+  <Carousel3D :items="items" :width="450" :height="600" />
+</template>
+```
+
+## Props
+
+| Prop Name        | Type        | Default | Description                                                 |
+| ---------------- | ----------- | ------- | ----------------------------------------------------------- |
+| `items`          | `unknown[]` | `[]`    | List of images or elements to be displayed in the carousel. |
+| `class`          | `string`    | `""`    | Additional CSS classes for styling the carousel overlay.    |
+| `containerClass` | `string`    | `""`    | CSS classes for styling the carousel container.             |
+| `width`          | `number`    | `450`   | Width of individual carousel items.                         |
+| `height`         | `number`    | `600`   | Height of individual carousel items.                        |
+
+## Credits
+
+- Built using Three.js for 3D rendering
+- Utilizes Motion-V for seamless animations
+- Thanks [@safakdinc](https://github.com/safakdinc) for sharing this component

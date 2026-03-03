@@ -1,0 +1,40 @@
+---
+title: Animated Tooltip
+description: A cool tooltip that reveals on hover, follows mouse pointer
+---
+
+## Overview
+
+Animated Tooltip is a component that displays interactive tooltips that follow the mouse pointer on hover, perfect for showing user profiles or additional information.
+
+## Usage
+
+```vue
+<template>
+  <AnimatedTooltip :items="people" />
+</template>
+
+<script setup>
+const people = [
+  {
+    id: 1,
+    name: "John Doe",
+    designation: "Software Engineer",
+    image: "/path/to/image.jpg"
+  }
+]
+</script>
+```
+
+## API Reference
+
+### Props
+
+| Prop Name | Type                                                                    | Default | Description                                                                                                                                 |
+| --------- | ----------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `items`   | `Array<{id: number, name: string, designation: string, image: string}>` | `[]`    | An array of objects, each representing an item. Each object in the array should have the following properties: id, name, designation, image |
+
+## Credits
+
+- Credits to [M Atif](https://github.com/atif0075) for this component.
+- Inspired from [Aceternity UI's Animated Tooltip](https://ui.aceternity.com/components/animated-tooltip).

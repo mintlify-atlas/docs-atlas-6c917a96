@@ -1,0 +1,57 @@
+---
+title: Spring Calendar
+description: An animated calendar widget that expands to reveal events and features smooth, spring-based Motion-V transitions.
+---
+
+## Overview
+
+The Spring Calendar component is an animated calendar widget that expands to reveal events with smooth, spring-based transitions powered by Motion-V. Perfect for event listings, schedules, and date-based content.
+
+## Usage
+
+```vue
+<SpringCalendar
+  :calendarData="[
+    {
+      month: 'Jan',
+      date: 15,
+      day: 'Mon',
+      events: [
+        { title: 'Team Meeting', day: 'Mon', time: '10:00 AM' },
+        { title: 'Project Review', day: 'Mon', time: '2:00 PM' }
+      ]
+    },
+    {
+      month: 'Jan',
+      date: 16,
+      day: 'Tue'
+    }
+  ]"
+  :initialIndex="0"
+  @update:activeIndex="handleIndexChange"
+/>
+```
+
+## Props
+
+<ResponseField name="calendarData" type="Array" required>
+  Array defining each calendar day and its optional events. Each item should have:
+  - `month` (string): Month abbreviation
+  - `date` (number): Day of the month
+  - `day` (string): Day of the week
+  - `events` (array, optional): Array of event objects with `title`, `day`, and `time`
+</ResponseField>
+
+<ResponseField name="initialIndex" type="number" default="0">
+  Day index initially selected.
+</ResponseField>
+
+## Events
+
+<ResponseField name="update:activeIndex" type="number">
+  Fires when a day button is clicked, emitting the new active index.
+</ResponseField>
+
+## Credits
+
+Inspired from the work of [sekachov](https://x.com/sekachov).

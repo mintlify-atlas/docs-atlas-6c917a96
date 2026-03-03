@@ -1,0 +1,71 @@
+---
+title: Glowing Effect
+description: A dynamic proximity-based glow effect that reacts to mouse movements and scroll events, perfect for highlighting interactive elements.
+---
+
+## Overview
+
+The Glowing Effect component creates a dynamic proximity-based glow that reacts to mouse movements and scroll events. It's perfect for adding interactive visual feedback to cards, buttons, and other UI elements.
+
+## Usage
+
+```vue
+<GlowingEffect
+  :blur="0"
+  :proximity="100"
+  :spread="20"
+  variant="default"
+  :glow="true"
+  :disabled="false"
+>
+  <div class="p-8">
+    Your interactive content here
+  </div>
+</GlowingEffect>
+```
+
+## Props
+
+<ResponseField name="blur" type="number" default="0">
+  The blur radius applied to the glow layer.
+</ResponseField>
+
+<ResponseField name="inactiveZone" type="number" default="0.7">
+  Defines the inner radius (as a fraction of the smallest dimension) within which the glow is inactive.
+</ResponseField>
+
+<ResponseField name="proximity" type="number" default="0">
+  Additional proximity distance (in pixels) to trigger the glow when the cursor is near the element.
+</ResponseField>
+
+<ResponseField name="spread" type="number" default="20">
+  Size of the spread of the glow effect around the element.
+</ResponseField>
+
+<ResponseField name="variant" type="'default' | 'white'" default="default">
+  Variant of the glow style (e.g., a white-themed version).
+</ResponseField>
+
+<ResponseField name="glow" type="boolean" default="false">
+  Controls the visibility of the static glow border.
+</ResponseField>
+
+<ResponseField name="class" type="string" default="">
+  Additional CSS classes for custom styling.
+</ResponseField>
+
+<ResponseField name="disabled" type="boolean" default="true">
+  Disables the proximity detection and glow animations when `true`.
+</ResponseField>
+
+<ResponseField name="movementDuration" type="number" default="2">
+  Duration (in seconds) of the smooth rotation animation.
+</ResponseField>
+
+<ResponseField name="borderWidth" type="number" default="1">
+  Width (in pixels) of the border applied to the glow effect.
+</ResponseField>
+
+## Credits
+
+Ported from [Aceternity UI Glowing Effect](https://ui.aceternity.com/components/glowing-effect).

@@ -1,0 +1,51 @@
+---
+title: "Number Ticker"
+description: "Animate numbers to count up or down to a target number."
+icon: "hashtag"
+---
+
+Create smooth number counting animations with customizable transitions and decimal places.
+
+## Usage
+
+```vue
+<NumberTicker
+  :value="100"
+  direction="up"
+  :decimalPlaces="0"
+  :delay="0"
+  :duration="1000"
+  transition="easeOutCubic"
+/>
+```
+
+## Props
+
+<ParamField path="value" type="int" default="0">
+  Value to count to.
+</ParamField>
+
+<ParamField path="direction" type="'up' | 'down'" default="up">
+  Direction to count in.
+</ParamField>
+
+<ParamField path="decimalPlaces" type="number" default="0">
+  Number of decimal places to show.
+</ParamField>
+
+<ParamField path="delay" type="number" default="0">
+  Delay before counting (in milliseconds).
+</ParamField>
+
+<ParamField path="duration" type="number" default="1000">
+  Total duration for the entire animation (in milliseconds).
+</ParamField>
+
+<ParamField path="transition" type="TransitionPresets" default="easeOutCubic">
+  Name of transition preset. See [VueUse transitions](https://vueuse.org/core/useTransition).
+</ParamField>
+
+## Credits
+
+- Credits to [Grzegorz Krol](https://github.com/Grzechu335) for porting this component
+- Ported from [Magic UI NumberTicker](https://magicui.design/docs/components/number-ticker)

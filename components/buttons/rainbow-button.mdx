@@ -1,0 +1,61 @@
+---
+title: Rainbow Button
+description: A rainbow effect on button.
+---
+
+## Usage
+
+The Rainbow Button creates a beautiful animated rainbow effect that cycles through vibrant colors. Perfect for creating attention-grabbing buttons in your interface.
+
+```vue
+<RainbowButton>
+  Click Me
+</RainbowButton>
+```
+
+## Props
+
+| Prop Name | Type     | Default    | Description                                    |
+| --------- | -------- | ---------- | ---------------------------------------------- |
+| `class`   | `string` | `""`       | Additional CSS classes to apply to the button. |
+| `is`      | `string` | `"button"` | The HTML tag to render for the component.      |
+| `speed`   | `number` | `2`        | Duration of the animation in seconds.          |
+
+## Examples
+
+### Basic Usage
+
+```vue
+<RainbowButton>
+  Rainbow Effect
+</RainbowButton>
+```
+
+### Custom Animation Speed
+
+```vue
+<RainbowButton :speed="4">
+  Slower Rainbow
+</RainbowButton>
+```
+
+### As a Link
+
+```vue
+<RainbowButton is="a" href="/destination">
+  Rainbow Link
+</RainbowButton>
+```
+
+### With Custom Styling
+
+```vue
+<RainbowButton class="px-6 py-3 text-xl font-bold">
+  Custom Styled
+</RainbowButton>
+```
+
+## Credits
+
+- Credits to [Grzegorz Krol](https://github.com/Grzechu335) for porting this component.
+- Credits to [Magic UI](https://magicui.design/docs/components/rainbow-button).

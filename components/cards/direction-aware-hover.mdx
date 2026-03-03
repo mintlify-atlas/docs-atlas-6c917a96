@@ -1,0 +1,46 @@
+---
+title: Direction Aware Hover Card
+description: A direction aware hover card that displays an image with dynamic hover effects and customizable content overlay.
+---
+
+A direction aware hover card that displays an image with dynamic hover effects based on the direction from which the cursor enters. Features a customizable content overlay.
+
+## Installation
+
+```bash
+npx inspira-ui add direction-aware-hover
+```
+
+## Usage
+
+```vue
+<template>
+  <DirectionAwareHover
+    image-url="/path/to/image.jpg"
+    class="w-96 h-96"
+    image-class="object-cover"
+    children-class="text-white"
+  >
+    <h3>Hover Content</h3>
+    <p>This content appears on hover with direction-aware animation.</p>
+  </DirectionAwareHover>
+</template>
+
+<script setup>
+import { DirectionAwareHover } from '@/components/ui/direction-aware-hover'
+</script>
+```
+
+## Props
+
+| Prop Name       | Type     | Default     | Description                                     |
+| --------------- | -------- | ----------- | ----------------------------------------------- |
+| `imageUrl`      | `string` | Required    | The URL of the image to be displayed.           |
+| `class`         | `string` | `undefined` | Additional CSS classes for the card container.  |
+| `imageClass`    | `string` | `undefined` | Additional CSS classes for the image element.   |
+| `childrenClass` | `string` | `undefined` | Additional CSS classes for the content overlay. |
+
+## Credits
+
+- Credits to [M Atif](https://github.com/atif0075) for porting this component.
+- Ported from [Aceternity UI's Direction Aware Hover](https://ui.aceternity.com/components/direction-aware-hover).

@@ -1,0 +1,41 @@
+---
+title: "Box Reveal"
+description: "An animated box reveal effect with customizable colors, duration, and delay."
+icon: "box"
+---
+
+Create engaging box reveal animations with customizable colors, duration, and timing.
+
+## Usage
+
+```vue
+<BoxReveal
+  color="#5046e6"
+  :duration="0.5"
+  :delay="0.25"
+>
+  <h1>Your revealed content</h1>
+</BoxReveal>
+```
+
+## Props
+
+<ParamField path="color" type="string" default="#5046e6">
+  Background color of the reveal box.
+</ParamField>
+
+<ParamField path="duration" type="number" default="0.5">
+  Duration of the reveal animation in seconds.
+</ParamField>
+
+<ParamField path="delay" type="number" default="0.25">
+  Delay before the reveal animation starts in seconds.
+</ParamField>
+
+<ParamField path="class" type="string" default="">
+  Additional CSS classes for custom styling.
+</ParamField>
+
+## Credits
+
+Ported from [Magic UI Box Reveal](https://magicui.design/docs/components/box-reveal).

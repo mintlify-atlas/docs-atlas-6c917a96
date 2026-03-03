@@ -1,0 +1,36 @@
+---
+title: Expandable Gallery
+description: A responsive image gallery with an interactive hover effect that expands images dynamically.
+---
+
+## Overview
+
+Expandable Gallery is a responsive image gallery component with interactive hover effects that dynamically expand images. Perfect for showcasing photo collections or portfolios.
+
+## Usage
+
+```vue
+<template>
+  <ExpandableGallery :images="imageUrls" />
+</template>
+
+<script setup>
+const imageUrls = [
+  '/image1.jpg',
+  '/image2.jpg',
+  '/image3.jpg'
+]
+</script>
+```
+
+## API Reference
+
+### Props
+
+| Prop Name | Type       | Default | Description                                    |
+| --------- | ---------- | ------- | ---------------------------------------------- |
+| `images`  | `string[]` | `[]`    | Array of image URLs to display in the gallery. |
+
+## Credits
+
+- Inspired from [Expandable Gallery Component by David Mráz](https://x.com/davidm_ml/status/1872319793124282653)

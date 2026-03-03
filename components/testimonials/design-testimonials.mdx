@@ -1,0 +1,77 @@
+---
+title: Design Testimonials
+description: A premium, design-forward testimonial section featuring cinematic typography, magnetic parallax, word-by-word animations, and auto-cycling navigation.
+---
+
+## Overview
+
+Design Testimonials is a premium testimonial component featuring cinematic typography, magnetic parallax effects, and word-by-word text animations. It includes auto-cycling navigation and provides a sophisticated, design-forward presentation of customer feedback.
+
+## Usage
+
+```vue
+<template>
+  <DesignTestimonials
+    title="Client Feedback"
+    :testimonials="testimonials"
+    :duration="6000"
+  />
+</template>
+
+<script setup>
+const testimonials = [
+  {
+    quote: "Working with this team transformed our entire approach to product development.",
+    author: "Sarah Johnson",
+    role: "VP of Engineering",
+    company: "TechCorp"
+  },
+  {
+    quote: "The attention to detail and innovative solutions exceeded all our expectations.",
+    author: "Michael Chen",
+    role: "CTO",
+    company: "InnovateLabs"
+  },
+  {
+    quote: "A game-changing partnership that delivered results beyond what we imagined.",
+    author: "Emily Rodriguez",
+    role: "Product Director",
+    company: "FutureScale"
+  }
+]
+</script>
+```
+
+## API Reference
+
+### Props
+
+| Prop Name      | Type                | Default          | Description                                                          |
+| -------------- | ------------------- | ---------------- | -------------------------------------------------------------------- |
+| `title`        | `string`            | `"Testimonials"` | Vertical label shown on the left side of the layout.                 |
+| `duration`     | `number`            | `6000`           | Time (in ms) before automatically switching to the next testimonial. |
+| `testimonials` | `TestimonialItem[]` | **required**     | List of testimonial entries to render and animate.                   |
+
+### TestimonialItem Object
+
+Each testimonial must follow this structure:
+
+| Property  | Type     | Description                                              |
+| --------- | -------- | -------------------------------------------------------- |
+| `quote`   | `string` | The testimonial text, animated word-by-word.             |
+| `author`  | `string` | Name of the testimonial author.                          |
+| `role`    | `string` | Role or designation of the author.                       |
+| `company` | `string` | Company or organization name (used in badge and ticker). |
+
+## Features
+
+- **Word-by-word animations**: Testimonial text animates in word by word for dramatic effect
+- **Magnetic parallax**: Interactive parallax effects create depth and engagement
+- **Auto-cycling navigation**: Automatically transitions between testimonials
+- **Cinematic typography**: Premium, design-forward text styling
+- **Motion-powered animations**: Smooth, performant animations using motion-v
+
+## Credits
+
+- Animation powered by motion-v
+- Ported from [Design Testimonials by Jatin Yadav](https://21st.dev/community/components/jatin-yadav05/design-testimonial/default)

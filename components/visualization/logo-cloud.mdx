@@ -1,0 +1,39 @@
+---
+title: Animated Logo Cloud
+description: Animated company cloud logs. Usually we can use to show company logos.
+---
+
+Animated company cloud logs. Usually we can use to show company logos.
+
+## Usage
+
+```vue
+<script setup lang="ts">
+import { AnimatedLogoCloud } from '@/components/visualization'
+
+const logos = [
+  { name: 'Company 1', path: '/logos/company1.svg' },
+  { name: 'Company 2', path: '/logos/company2.svg' },
+  { name: 'Company 3', path: '/logos/company3.svg' },
+]
+</script>
+
+<template>
+  <AnimatedLogoCloud 
+    title="Trusted by Companies like" 
+    :logos="logos" 
+  />
+</template>
+```
+
+## Props
+
+| Prop Name | Type     | Default                     | Description                                                    |
+| --------- | -------- | --------------------------- | -------------------------------------------------------------- |
+| `class`   | `string` | `-`                         | The delay in milliseconds before adding each item to the list. |
+| `title`   | `string` | `Trusted by Companies like` | Title of animated logs.                                        |
+| `logos`   | `[]`     | `[{name: "", path: ""}]`    | Array of items(logos) with name & path fields.                 |
+
+## Credits
+
+- Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component

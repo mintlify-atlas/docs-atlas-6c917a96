@@ -1,0 +1,62 @@
+---
+title: "3D Text"
+description: "A stylish 3D text component with customizable colors, shadows, and animation options."
+icon: "cube"
+---
+
+Create eye-catching 3D text effects with customizable colors, shadows, and wiggle animations.
+
+## Usage
+
+```vue
+<Text3d
+  textColor="white"
+  strokeColor="black"
+  shadowColor="yellow"
+  :animate="true"
+>
+  Your 3D Text Here
+</Text3d>
+```
+
+## Props
+
+<ParamField path="textColor" type="string" default="white">
+  Color of the main text.
+</ParamField>
+
+<ParamField path="letterSpacing" type="number" default="-0.1">
+  Adjusts the spacing between letters in `ch` units.
+</ParamField>
+
+<ParamField path="strokeColor" type="string" default="black">
+  Color of the text stroke.
+</ParamField>
+
+<ParamField path="shadowColor" type="string" default="yellow">
+  Color of the text shadow.
+</ParamField>
+
+<ParamField path="strokeSize" type="number" default="20">
+  Thickness of the text stroke in pixels.
+</ParamField>
+
+<ParamField path="shadow1Size" type="number" default="7">
+  Size of the first shadow layer in pixels.
+</ParamField>
+
+<ParamField path="shadow2Size" type="number" default="10">
+  Size of the second shadow layer in pixels.
+</ParamField>
+
+<ParamField path="class" type="string" default="">
+  Additional CSS classes for custom styling.
+</ParamField>
+
+<ParamField path="animate" type="boolean" default="true">
+  Enables wiggle animation when set to `true`.
+</ParamField>
+
+<ParamField path="animationDuration" type="number" default="1500">
+  Duration of the wiggle animation in milliseconds.
+</ParamField>

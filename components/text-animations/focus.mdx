@@ -1,0 +1,50 @@
+---
+title: "Focus"
+description: "Highlight words in a sentence with a dynamic blurred effect and animated focus frame. Supports auto-cycling or manual hover focus mode."
+icon: "bullseye"
+---
+
+Create dynamic focus effects on words with blur and animated border frame.
+
+## Usage
+
+```vue
+<Focus
+  sentence="Inspira Focus Effect"
+  :manualMode="false"
+  :blurAmount="5"
+  borderColor="green"
+  :animationDuration="0.5"
+  :pauseBetweenAnimations="1"
+/>
+```
+
+## Props
+
+<ParamField path="sentence" type="string" default="Inspira Focus">
+  Text sentence to display and animate word-by-word.
+</ParamField>
+
+<ParamField path="manualMode" type="boolean" default="false">
+  If true, focus highlights on hover; otherwise auto-cycles.
+</ParamField>
+
+<ParamField path="blurAmount" type="number" default="5">
+  Blur radius in pixels for inactive words.
+</ParamField>
+
+<ParamField path="borderColor" type="string" default="green">
+  Color of the animated focus frame border.
+</ParamField>
+
+<ParamField path="animationDuration" type="number" default="0.5">
+  Duration in seconds for the focus frame animation transitions.
+</ParamField>
+
+<ParamField path="pauseBetweenAnimations" type="number" default="1">
+  Pause duration in seconds between auto-focus transitions.
+</ParamField>
+
+## Credits
+
+Inspired from [Focus Text Hover Effect on CodePen](https://codepen.io/CameronFitzwilliam/pen/JJRjMa).

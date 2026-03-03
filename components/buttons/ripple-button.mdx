@@ -1,0 +1,82 @@
+---
+title: Ripple Button
+description: A stylish ripple button component with customizable colors and animation duration.
+---
+
+## Usage
+
+The Ripple Button creates an elegant ripple effect on click, providing tactile feedback to users. The ripple animation emanates from the click point, creating a modern and polished interaction.
+
+```vue
+<RippleButton @click="handleClick">
+  Click Me
+</RippleButton>
+```
+
+## Props
+
+| Prop Name     | Type     | Default     | Description                                       |
+| ------------- | -------- | ----------- | ------------------------------------------------- |
+| `class`       | `string` | -           | Additional CSS classes for custom styling.        |
+| `rippleColor` | `string` | `"#ADD8E6"` | Color of the ripple effect.                       |
+| `duration`    | `number` | `600`       | Duration of the ripple animation in milliseconds. |
+
+## Events
+
+| Event Name | Type    | Description |
+| ---------- | ------- | ----------- |
+| `click`    | `event` | Click event |
+
+## Examples
+
+### Basic Usage
+
+```vue
+<RippleButton>
+  Ripple Effect
+</RippleButton>
+```
+
+### Custom Ripple Color
+
+```vue
+<RippleButton rippleColor="#FF6B6B">
+  Red Ripple
+</RippleButton>
+```
+
+### Custom Duration
+
+```vue
+<RippleButton :duration="1000">
+  Slow Ripple
+</RippleButton>
+```
+
+### With Click Handler
+
+```vue
+<RippleButton 
+  rippleColor="#4ECDC4" 
+  :duration="800"
+  @click="handleButtonClick"
+>
+  Submit
+</RippleButton>
+```
+
+### With Custom Styling
+
+```vue
+<RippleButton 
+  class="bg-blue-500 text-white px-6 py-3 rounded-lg"
+  rippleColor="#ffffff"
+>
+  Styled Button
+</RippleButton>
+```
+
+## Credits
+
+- Inspired by [Magic UI's Ripple Button](https://magicui.design/docs/components/ripple-button) component.
+- Credits to [kalix127](https://github.com/kalix127) for porting this component.

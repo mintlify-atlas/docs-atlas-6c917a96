@@ -1,0 +1,58 @@
+---
+title: Border Beam
+description: A stylish animated border beam effect with customizable size, duration, colors, and delay.
+---
+
+## Overview
+
+The Border Beam component creates a stylish animated border effect with customizable appearance and timing. Perfect for highlighting cards, buttons, or important UI elements.
+
+## Usage
+
+```vue
+<BorderBeam
+  :size="200"
+  :duration="15"
+  :borderWidth="1.5"
+  colorFrom="#ffaa40"
+  colorTo="#9c40ff"
+/>
+```
+
+## Props
+
+<ResponseField name="class" type="string" default="">
+  Additional CSS classes for custom styling.
+</ResponseField>
+
+<ResponseField name="size" type="number" default="200">
+  Size of the animated border beam effect.
+</ResponseField>
+
+<ResponseField name="duration" type="number" default="15">
+  Duration of the animation in seconds.
+</ResponseField>
+
+<ResponseField name="borderWidth" type="number" default="1.5">
+  Width of the border around the beam effect.
+</ResponseField>
+
+<ResponseField name="anchor" type="number" default="90">
+  Anchor point for the beam, determining its position along the border.
+</ResponseField>
+
+<ResponseField name="colorFrom" type="string" default="#ffaa40">
+  Starting color for the gradient of the beam.
+</ResponseField>
+
+<ResponseField name="colorTo" type="string" default="#9c40ff">
+  Ending color for the gradient of the beam.
+</ResponseField>
+
+<ResponseField name="delay" type="number" default="0">
+  Delay before the animation starts, in seconds.
+</ResponseField>
+
+## Credits
+
+Ported from [Magic UI](https://magicui.design/docs/components/border-beam).

@@ -1,0 +1,43 @@
+---
+title: Morphing Tabs
+description: This is a morphing tabs interaction, recreated by Preet's work and featuring the gooey effect component.
+---
+
+## Overview
+
+Morphing Tabs is a tab component with a unique morphing animation effect featuring a gooey transition between active tabs.
+
+## Usage
+
+```vue
+<template>
+  <MorphingTabs
+    :tabs="['Tab 1', 'Tab 2', 'Tab 3']"
+    v-model:activeTab="currentTab"
+    :margin="20"
+    :blurStdDeviation="6"
+  />
+</template>
+
+<script setup>
+import { ref } from 'vue'
+const currentTab = ref('Tab 1')
+</script>
+```
+
+## API Reference
+
+### Props
+
+| Prop Name          | Type       | Default | Description                                    |
+| ------------------ | ---------- | ------- | ---------------------------------------------- |
+| `class`            | `string`   | `""`    | Additional class names to style the component. |
+| `tabs`             | `string[]` | `[]`    | Tabs.                                          |
+| `activeTab`        | `string`   | `""`    | Current active Tab.                            |
+| `margin`           | `number`   | `20`    | Active tab margin left and right.              |
+| `blurStdDeviation` | `number`   | `6`     | Svg blur stdDeviation, tab rounded use it.     |
+
+## Credits
+
+- Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
+- Inspired and ported from [@Preet "Exclusion tabs"](https://x.com/wickedmishra/status/1823026659894940124).

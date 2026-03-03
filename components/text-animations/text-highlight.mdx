@@ -1,0 +1,38 @@
+---
+title: "Text Highlight"
+description: "A text effect that fills background of a text to highlight it."
+icon: "marker"
+---
+
+Create animated background fill effects to highlight important text.
+
+## Usage
+
+```vue
+<TextHighlight
+  :delay="0"
+  :duration="2000"
+  textEndColor="inherit"
+>
+  Highlighted text
+</TextHighlight>
+```
+
+## Props
+
+<ParamField path="delay" type="number" default="0">
+  Delay before the animation starts, in `ms`.
+</ParamField>
+
+<ParamField path="duration" type="number" default="2000">
+  Duration of the animation, in `ms`.
+</ParamField>
+
+<ParamField path="textEndColor" type="string" default="inherit">
+  Color of the text at the end of the animation. Match WCAG recommendations.
+</ParamField>
+
+## Credits
+
+- Inspired by [Aceternity UI](https://ui.aceternity.com/components/hero-highlight)
+- Credits to [Nathan De Pachtere](https://nathandepachtere.com) for porting this component

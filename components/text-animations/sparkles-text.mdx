@@ -1,0 +1,41 @@
+---
+title: "Sparkles Text"
+description: "A dynamic text that generates continuous sparkles with smooth transitions, perfect for highlighting text with animated stars."
+icon: "sparkles"
+---
+
+Highlight your text with continuous sparkle animations and customizable colors.
+
+## Usage
+
+```vue
+<SparklesText
+  text="Sparkles Text"
+  :sparklesCount="10"
+  :colors="{first: '#A07CFE', second: '#FE8FB5'}"
+/>
+```
+
+## Props
+
+<ParamField path="class" type="string" default="-">
+  The class to be applied to the sparkles text.
+</ParamField>
+
+<ParamField path="text" type="string" default="">
+  The text to display.
+</ParamField>
+
+<ParamField path="sparklesCount" type="number" default="10">
+  Number of sparkles that appear on the text.
+</ParamField>
+
+<ParamField path="colors" type="object" default="{first: '#A07CFE', second: '#FE8FB5'}">
+  The sparkles colors with `first` and `second` properties.
+</ParamField>
+
+## Credits
+
+- Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component
+- Inspired from [Magic UI](https://magicui.design/docs/components/sparkles-text)
+- Credits to [M Atif](https://github.com/atif0075) for updating this component

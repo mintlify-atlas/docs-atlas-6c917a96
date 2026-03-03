@@ -1,0 +1,40 @@
+---
+title: "Morphing Text"
+description: "This MorphingText component dynamically transitions between an array of text strings, creating a smooth, engaging visual effect."
+icon: "wand-magic-sparkles"
+---
+
+Create smooth, organic transitions between different text strings with morphing animations.
+
+## Usage
+
+```vue
+<MorphingText
+  :texts="['Hello', 'World', 'Morphing', 'Text']"
+  :morphTime="1.5"
+  :coolDownTime="0.5"
+/>
+```
+
+## Props
+
+<ParamField path="texts" type="string[]" default="[]">
+  Array of texts to morph between.
+</ParamField>
+
+<ParamField path="class" type="string" default="">
+  Additional classes for the container.
+</ParamField>
+
+<ParamField path="morphTime" type="number" default="1.5">
+  Animation execution time.
+</ParamField>
+
+<ParamField path="coolDownTime" type="number" default="0.5">
+  Animation dwell time.
+</ParamField>
+
+## Credits
+
+- Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component
+- Inspired and ported from [Magic UI Morphing Text](https://magicui.design/docs/components/morphing-text)

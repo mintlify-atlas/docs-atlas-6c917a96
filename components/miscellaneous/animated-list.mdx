@@ -1,0 +1,30 @@
+---
+title: Animated List
+description: A sequentially animated list that introduces each item with a timed delay, perfect for displaying notifications or events on your landing page.
+---
+
+## Overview
+
+Animated List is a component that displays list items with sequential animation, adding each item with a configurable delay. Perfect for notifications, activity feeds, or event lists.
+
+## Usage
+
+```vue
+<template>
+  <AnimatedList :delay="1000">
+    <Notification v-for="item in items" :key="item.id" :item="item" />
+  </AnimatedList>
+</template>
+```
+
+## API Reference
+
+### Props
+
+| Prop Name | Type     | Default | Description                                                    |
+| --------- | -------- | ------- | -------------------------------------------------------------- |
+| `delay`   | `number` | `1`     | The delay in milliseconds before adding each item to the list. |
+
+## Credits
+
+- Inspired by [Magic UI](https://magicui.design/docs/components/animated-list).

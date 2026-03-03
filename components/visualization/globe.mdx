@@ -1,0 +1,59 @@
+---
+title: Globe
+description: An interactive rotating globe component.
+---
+
+An interactive rotating globe component.
+
+## Installation
+
+```bash
+npm install cobe vue-use-spring
+```
+
+## Usage
+
+```vue
+<script setup lang="ts">
+import { Globe } from '@/components/visualization'
+import type { COBEOptions } from 'cobe'
+
+const config: COBEOptions = {
+  width: 800,
+  height: 800,
+  phi: 0,
+  theta: 0.3,
+  dark: 1,
+  diffuse: 0.4,
+  mapSamples: 16000,
+  mapBrightness: 1.2,
+  baseColor: [1, 1, 1],
+  markerColor: [251 / 255, 100 / 255, 21 / 255],
+  glowColor: [1, 1, 1],
+  markers: [
+    { location: [14.5995, 120.9842], size: 0.03 },
+    { location: [19.076, 72.8777], size: 0.1 },
+  ],
+}
+</script>
+
+<template>
+  <Globe :config="config" />
+</template>
+```
+
+## Props
+
+| Prop Name   | Type          | Default | Description                                                                                       |
+| ----------- | ------------- | ------- | ------------------------------------------------------------------------------------------------- |
+| `class`     | `string`      | `""`    | Additional CSS classes for custom styling.                                                        |
+| `config`    | `COBEOptions` | N/A     | Configuration object for the globe, following [COBE](https://cobe.vercel.app/docs/api) library options. |
+| `mass`      | `number`      | `1`     | Mass parameter for the spring animation controlling rotation inertia.                             |
+| `tension`   | `number`      | `280`   | Tension parameter for the spring animation, affecting responsiveness.                             |
+| `friction`  | `number`      | `100`   | Friction parameter for the spring animation, affecting damping.                                   |
+| `precision` | `number`      | `0.001` | Precision parameter for the spring animation calculations.                                        |
+
+## Credits
+
+- Built using the [cobe](https://github.com/shuding/cobe) library for WebGL globe visualization
+- Ported from [Magic UI](https://magicui.design/docs/components/globe)

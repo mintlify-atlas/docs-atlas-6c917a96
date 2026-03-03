@@ -1,0 +1,56 @@
+---
+title: Multi Step Loader
+description: A step loader for screens that works with async conditions too.
+---
+
+## Overview
+
+Multi Step Loader is a loading component that displays sequential steps with async support. Perfect for onboarding flows, loading sequences, or multi-step processes.
+
+## Usage
+
+```vue
+<template>
+  <MultiStepLoader
+    :loading="isLoading"
+    :steps="steps"
+    :defaultDuration="1500"
+    :preventClose="false"
+    @state-change="handleStateChange"
+    @complete="handleComplete"
+    @close="handleClose"
+  />
+</template>
+
+<script setup>
+const steps = [
+  { text: 'Loading data...' },
+  { text: 'Processing...' },
+  { text: 'Complete!' }
+]
+</script>
+```
+
+## API Reference
+
+### Props
+
+| Prop Name         | Type      | Default | Description                                                                  |
+| ----------------- | --------- | ------- | ---------------------------------------------------------------------------- |
+| `loading`         | `boolean` | `false` | Controls the visibility of the loader. When `true`, the loader is displayed. |
+| `steps`           | `Step[]`  | `[]`    | Array of step objects defining the loading sequence.                         |
+| `defaultDuration` | `number`  | `1500`  | The duration of each step in milliseconds.                                   |
+| `preventClose`    | `boolean` | `false` | If `true`, the close button will not be shown.                               |
+
+### Events
+
+| Event Name     | Payload Type | Description                                                          |
+| -------------- | ------------ | -------------------------------------------------------------------- |
+| `state-change` | `number`     | Emitted when the current step changes, providing the new step index. |
+| `complete`     | `void`       | Emitted when all steps have been completed.                          |
+| `close`        | `void`       | Emitted when the loader is closed by button.                         |
+
+## Credits
+
+- Credits to [M Atif](https://github.com/atif0075) for this component.
+- Inspired from [Aceternity UI's Multi Step Loader](https://ui.aceternity.com/components/multi-step-loader).

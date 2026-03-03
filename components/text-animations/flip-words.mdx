@@ -1,0 +1,35 @@
+---
+title: "Flip Words"
+description: "A component that flips through a list of words."
+icon: "repeat"
+---
+
+Animate through a list of words with smooth flip transitions.
+
+## Usage
+
+```vue
+<FlipWords
+  :words="['amazing', 'fantastic', 'incredible']"
+  :duration="2000"
+/>
+```
+
+## Props
+
+<ParamField path="words" type="Array">
+  An array of words to be displayed and animated.
+</ParamField>
+
+<ParamField path="duration" type="number">
+  Duration (in milliseconds) for each word to be displayed before flipping to the next word.
+</ParamField>
+
+<ParamField path="class" type="string">
+  Additional CSS classes to apply to the component.
+</ParamField>
+
+## Credits
+
+- Credits to [M Atif](https://github.com/atif0075) for porting this component
+- Ported from [Aceternity UI's Flip Words](https://ui.aceternity.com/components/flip-words)

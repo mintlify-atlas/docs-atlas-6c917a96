@@ -1,0 +1,72 @@
+---
+title: Testimonial Slider
+description: A lightweight testimonial slider with image rotation, text transitions, and optional auto-rotation.
+---
+
+## Overview
+
+Testimonial Slider is a lightweight component for displaying customer testimonials in a rotating carousel format. It features smooth image rotation, text transitions, and optional auto-rotation functionality.
+
+## Usage
+
+```vue
+<template>
+  <TestimonialSlider
+    :testimonials="testimonials"
+    :autoRotate="true"
+    :duration="5"
+  />
+</template>
+
+<script setup>
+const testimonials = [
+  {
+    img: "/testimonials/user1.jpg",
+    quote: "This service has completely transformed how we work. Highly recommended!",
+    name: "Alex Thompson",
+    role: "Marketing Director"
+  },
+  {
+    img: "/testimonials/user2.jpg",
+    quote: "Outstanding support and incredible results. Best decision we made this year.",
+    name: "Maria Garcia",
+    role: "Founder & CEO"
+  },
+  {
+    img: "/testimonials/user3.jpg",
+    quote: "Professional, reliable, and always delivering beyond expectations.",
+    name: "David Kim",
+    role: "Operations Manager"
+  }
+]
+</script>
+```
+
+## API Reference
+
+### Props
+
+| Prop Name      | Type                                                                | Default | Description                                                            |
+| -------------- | ------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------- |
+| `testimonials` | `Array<{ img: string; quote: string; name: string; role: string }>` | `[]`    | Array of testimonial objects displayed by the slider.                  |
+| `autoRotate`   | `boolean`                                                           | `true`  | If `true`, the slider advances automatically every `duration` seconds. |
+| `duration`     | `number`                                                            | `5`     | Interval in seconds between slides when auto-rotation is enabled.      |
+
+### Testimonial Object
+
+Each testimonial object in the array should have:
+
+| Property | Type     | Description                               |
+| -------- | -------- | ----------------------------------------- |
+| `img`    | `string` | URL or path to the testimonial author's image |
+| `quote`  | `string` | The testimonial text                      |
+| `name`   | `string` | Name of the testimonial author            |
+| `role`   | `string` | Role or designation of the author         |
+
+## Features
+
+- **Lightweight**: Minimal footprint with smooth performance
+- **Image rotation**: Smooth transitions between testimonial images
+- **Auto-rotation**: Optional automatic cycling through testimonials
+- **Customizable timing**: Control the duration between slides
+- **Responsive design**: Works seamlessly across all device sizes

@@ -1,0 +1,36 @@
+---
+title: "Text Hover Effect"
+description: "A text hover effect that animates and outlines gradient on hover, as seen on x.ai."
+icon: "hand-pointer"
+---
+
+Create sophisticated text hover effects with gradient outlines and smooth transitions.
+
+## Usage
+
+```vue
+<TextHoverEffect
+  text="Hover Me"
+  :duration="200"
+  :strokeWidth="0.75"
+  :opacity="null"
+/>
+```
+
+## Props
+
+<ParamField path="text" type="string" required>
+  The text to be displayed with the hover effect.
+</ParamField>
+
+<ParamField path="duration" type="number" default="200">
+  The duration of the mask transition animation in seconds.
+</ParamField>
+
+<ParamField path="strokeWidth" type="number" default="0.75">
+  The width of the text stroke.
+</ParamField>
+
+<ParamField path="opacity" type="number" default="null">
+  The opacity of the text.
+</ParamField>

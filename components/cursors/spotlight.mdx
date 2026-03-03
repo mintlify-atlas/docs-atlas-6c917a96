@@ -1,0 +1,117 @@
+---
+title: Card Spotlight
+description: A dynamic spotlight effect that follows the mouse cursor, creating an interactive visual highlight perfect for cards and containers.
+---
+
+A card component with an elegant spotlight effect that follows your cursor, adding depth and interactivity to your UI elements.
+
+## Installation
+
+<Steps>
+  <Step title="Install dependencies">
+    This component works with Tailwind CSS. Ensure Tailwind is configured in your project.
+  </Step>
+  
+  <Step title="Copy component code">
+    Add the `CardSpotlight.vue` component to your project.
+  </Step>
+</Steps>
+
+## Usage
+
+### Basic Usage
+
+```vue
+<template>
+  <CardSpotlight>
+    <div class="p-6">
+      <h3 class="text-xl font-bold">Card Title</h3>
+      <p class="mt-2">Card content goes here</p>
+    </div>
+  </CardSpotlight>
+</template>
+
+<script setup>
+import CardSpotlight from '@/components/inspira/ui/CardSpotlight.vue'
+</script>
+```
+
+### Custom Spotlight Size
+
+```vue
+<template>
+  <CardSpotlight :gradientSize="300">
+    <div class="p-6">
+      <h3 class="text-xl font-bold">Larger Spotlight</h3>
+      <p class="mt-2">This card has a bigger spotlight effect</p>
+    </div>
+  </CardSpotlight>
+</template>
+```
+
+### Custom Color and Opacity
+
+```vue
+<template>
+  <CardSpotlight 
+    gradientColor="#3b82f6" 
+    :gradientOpacity="0.6"
+  >
+    <div class="p-6">
+      <h3 class="text-xl font-bold">Blue Spotlight</h3>
+      <p class="mt-2">Custom colored spotlight effect</p>
+    </div>
+  </CardSpotlight>
+</template>
+```
+
+### With Custom Slot Classes
+
+```vue
+<template>
+  <CardSpotlight slotClass="rounded-lg bg-slate-900 border border-slate-800">
+    <div class="p-6">
+      <h3 class="text-xl font-bold">Styled Card</h3>
+      <p class="mt-2">With custom container styling</p>
+    </div>
+  </CardSpotlight>
+</template>
+```
+
+## Props
+
+<ResponseField name="gradientSize" type="number" default="200">
+  Radius in pixels of the spotlight effect. Larger values create a bigger spotlight area.
+</ResponseField>
+
+<ResponseField name="gradientColor" type="string" default="#262626">
+  The color of the spotlight gradient. Accepts any valid CSS color value.
+</ResponseField>
+
+<ResponseField name="gradientOpacity" type="number" default="0.8">
+  The opacity level of the spotlight gradient effect. Range: 0 (transparent) to 1 (opaque).
+</ResponseField>
+
+<ResponseField name="slotClass" type="string">
+  CSS classes to apply to the parent container containing the slot content.
+</ResponseField>
+
+## Features
+
+- **Mouse Tracking**: Spotlight follows cursor movement in real-time
+- **Smooth Animation**: Fluid transitions as spotlight moves
+- **Customizable Appearance**: Control size, color, and opacity
+- **Slot Support**: Wrap any content inside
+- **Responsive**: Works on all screen sizes
+
+## Use Cases
+
+- Feature cards on landing pages
+- Interactive pricing tables
+- Portfolio item previews
+- Dashboard widgets
+- Product showcases
+
+## Credits
+
+- Inspired by Magic Card component from [Magic UI](https://magicui.design/docs/components/magic-card)

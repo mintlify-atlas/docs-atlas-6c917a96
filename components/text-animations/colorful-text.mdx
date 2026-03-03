@@ -1,0 +1,46 @@
+---
+title: "Colourful Text"
+description: "A text component with various colours, filter and scale effects."
+icon: "palette"
+---
+
+Animate text with vibrant color transitions and motion effects for each character.
+
+## Usage
+
+```vue
+<ColourfulText
+  text="Your colorful text"
+  :colors="[
+    'rgb(131, 179, 32)',
+    'rgb(47, 195, 106)',
+    'rgb(42, 169, 210)',
+    'rgb(4, 112, 202)'
+  ]"
+  startColor="rgb(255,255,255)"
+  :duration="5"
+/>
+```
+
+## Props
+
+<ParamField path="text" type="string" default="black">
+  The text string to be rendered with colorful animated characters. Each character will be individually animated with color transitions and motion effects.
+</ParamField>
+
+<ParamField path="colors" type="string[]" default="[various colors]">
+  Array of colors for the text animation. Default includes 10 vibrant colors ranging from green to orange.
+</ParamField>
+
+<ParamField path="startColor" type="string" default="rgb(255,255,255)">
+  The starting color for each character.
+</ParamField>
+
+<ParamField path="duration" type="number" default="5">
+  The animation duration time in seconds.
+</ParamField>
+
+## Credits
+
+- Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component
+- Ported from [Aceternity UI Colourful Text](https://ui.aceternity.com/components/colourful-text)

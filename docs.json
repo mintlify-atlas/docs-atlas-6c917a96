@@ -1,122 +1,219 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Inspira UI",
+  "theme": "palm",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "primary": "#8B5CF6",
+    "light": "#A78BFA",
+    "dark": "#7C3AED"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
     "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "type": "github",
+      "href": "https://github.com/unovue/inspira-ui"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/unovue/inspira-ui"
     }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "installation",
+              "contributing",
+              "code-of-conduct"
+            ]
+          },
+          {
+            "group": "Components",
+            "pages": [
+              "components/overview"
+            ]
+          },
+          {
+            "group": "Backgrounds",
+            "pages": [
+              "components/backgrounds/aurora-background",
+              "components/backgrounds/black-hole-background",
+              "components/backgrounds/bubbles-bg",
+              "components/backgrounds/cosmic-portal",
+              "components/backgrounds/falling-stars",
+              "components/backgrounds/flickering-grid",
+              "components/backgrounds/interactive-grid-pattern",
+              "components/backgrounds/lamp-effect",
+              "components/backgrounds/liquid-background",
+              "components/backgrounds/neural-background",
+              "components/backgrounds/particle-whirlpool-bg",
+              "components/backgrounds/particles-bg",
+              "components/backgrounds/pattern-background",
+              "components/backgrounds/ripple",
+              "components/backgrounds/silk-background",
+              "components/backgrounds/singularity-background",
+              "components/backgrounds/snowfall-bg",
+              "components/backgrounds/sparkles",
+              "components/backgrounds/stars-background",
+              "components/backgrounds/stractium-background",
+              "components/backgrounds/tetris",
+              "components/backgrounds/thunderstorm-background",
+              "components/backgrounds/video-text",
+              "components/backgrounds/vortex",
+              "components/backgrounds/warp-background",
+              "components/backgrounds/wavy-background"
+            ]
+          },
+          {
+            "group": "Buttons",
+            "pages": [
+              "components/buttons/gradient-button",
+              "components/buttons/interactive-hover-button",
+              "components/buttons/rainbow-button",
+              "components/buttons/ripple-button",
+              "components/buttons/shimmer-button"
+            ]
+          },
+          {
+            "group": "Cards",
+            "pages": [
+              "components/cards/3d-card",
+              "components/cards/apple-card-carousel",
+              "components/cards/card-spotlight",
+              "components/cards/direction-aware-hover",
+              "components/cards/flip-card",
+              "components/cards/glare-card"
+            ]
+          },
+          {
+            "group": "Cursors",
+            "pages": [
+              "components/cursors/cursor-following-text",
+              "components/cursors/glowing-stars-background",
+              "components/cursors/spotlight",
+              "components/cursors/trailing-cursor"
+            ]
+          },
+          {
+            "group": "Device Mocks",
+            "pages": [
+              "components/device-mocks/browser-mock",
+              "components/device-mocks/phone-mock"
+            ]
+          },
+          {
+            "group": "Input & Forms",
+            "pages": [
+              "components/input-and-forms/balance-slider",
+              "components/input-and-forms/color-picker",
+              "components/input-and-forms/file-upload",
+              "components/input-and-forms/halo-search",
+              "components/input-and-forms/input",
+              "components/input-and-forms/placeholders-and-vanish-input"
+            ]
+          },
+          {
+            "group": "Text Animations",
+            "pages": [
+              "components/text-animations/3d-text",
+              "components/text-animations/blur-reveal",
+              "components/text-animations/box-reveal",
+              "components/text-animations/colorful-text",
+              "components/text-animations/container-text-flip",
+              "components/text-animations/encrypted-text",
+              "components/text-animations/flip-words",
+              "components/text-animations/focus",
+              "components/text-animations/hyper-text",
+              "components/text-animations/letter-pullup",
+              "components/text-animations/line-shadow-text",
+              "components/text-animations/morphing-text",
+              "components/text-animations/number-ticker",
+              "components/text-animations/radiant-text",
+              "components/text-animations/sparkles-text",
+              "components/text-animations/spinning-text",
+              "components/text-animations/text-generate-effect",
+              "components/text-animations/text-glitch",
+              "components/text-animations/text-highlight",
+              "components/text-animations/text-hover-effect"
+            ]
+          },
+          {
+            "group": "Special Effects",
+            "pages": [
+              "components/special-effects/animated-beam",
+              "components/special-effects/border-beam",
+              "components/special-effects/confetti",
+              "components/special-effects/dither-shader",
+              "components/special-effects/glow-border",
+              "components/special-effects/glowing-effect",
+              "components/special-effects/meteors",
+              "components/special-effects/neon-border",
+              "components/special-effects/particle-image",
+              "components/special-effects/progressive-blur",
+              "components/special-effects/scratch-to-reveal",
+              "components/special-effects/spring-calendar"
+            ]
+          },
+          {
+            "group": "Visualization",
+            "pages": [
+              "components/visualization/bending-gallery",
+              "components/visualization/carousal-3d",
+              "components/visualization/file-tree",
+              "components/visualization/github-globe",
+              "components/visualization/globe",
+              "components/visualization/icon-cloud",
+              "components/visualization/infinite-grid",
+              "components/visualization/light-speed",
+              "components/visualization/liquid-glass",
+              "components/visualization/liquid-logo",
+              "components/visualization/logo-cloud",
+              "components/visualization/logo-origami",
+              "components/visualization/orbit",
+              "components/visualization/spline",
+              "components/visualization/world-map"
+            ]
+          },
+          {
+            "group": "Miscellaneous",
+            "pages": [
+              "components/miscellaneous/animate-grid",
+              "components/miscellaneous/animated-circular-progressbar",
+              "components/miscellaneous/animated-list",
+              "components/miscellaneous/animated-modal",
+              "components/miscellaneous/animated-tooltip",
+              "components/miscellaneous/bento-grid",
+              "components/miscellaneous/book",
+              "components/miscellaneous/compare",
+              "components/miscellaneous/container-scroll",
+              "components/miscellaneous/dock",
+              "components/miscellaneous/expandable-gallery",
+              "components/miscellaneous/images-slider",
+              "components/miscellaneous/lens",
+              "components/miscellaneous/link-preview",
+              "components/miscellaneous/marquee",
+              "components/miscellaneous/morphing-tabs",
+              "components/miscellaneous/multi-step-loader",
+              "components/miscellaneous/photo-gallery",
+              "components/miscellaneous/scroll-island",
+              "components/miscellaneous/shader-toy"
+            ]
+          },
+          {
+            "group": "Testimonials",
+            "pages": [
+              "components/testimonials/animated-testimonials",
+              "components/testimonials/design-testimonials",
+              "components/testimonials/testimonial-slider"
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

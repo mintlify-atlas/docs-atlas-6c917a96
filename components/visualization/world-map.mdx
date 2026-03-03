@@ -1,0 +1,54 @@
+---
+title: World Map
+description: Displays a customizable world map with animated arcs and pulse effects for geographical points.
+---
+
+Displays a customizable world map with animated arcs and pulse effects for geographical points.
+
+## Installation
+
+```bash
+npm install dotted-map
+```
+
+## Usage
+
+```vue
+<script setup lang="ts">
+import { WorldMap } from '@/components/visualization'
+
+const dots = [
+  {
+    start: { lat: 40.7128, lng: -74.0060, label: 'New York' },
+    end: { lat: 51.5074, lng: -0.1278, label: 'London' },
+  },
+  {
+    start: { lat: 35.6762, lng: 139.6503, label: 'Tokyo' },
+    end: { lat: 1.3521, lng: 103.8198, label: 'Singapore' },
+  },
+]
+</script>
+
+<template>
+  <WorldMap 
+    :dots="dots" 
+    line-color="#0EA5E9" 
+    map-color="#ffffff" 
+    map-bg-color="#000000"
+  />
+</template>
+```
+
+## Props
+
+| Prop Name    | Type                                                                                                                 | Default     | Description                                                                             |
+| ------------ | -------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------------------- |
+| `dots`       | `Array<{ start: { lat: number; lng: number; label?: string }, end: { lat: number; lng: number; label?: string } }> ` | `[]`        | Array of dot objects, each containing a start and end coordinate (latitude, longitude). |
+| `class`      | `string`                                                                                                             | `""`        | Additional CSS classes for custom styling.                                              |
+| `lineColor`  | `string`                                                                                                             | `"#0EA5E9"` | Color of the arcs and dot borders.                                                      |
+| `mapColor`   | `string`                                                                                                             | —           | Main color of the dotted map. (**Required**)                                            |
+| `mapBgColor` | `string`                                                                                                             | —           | Background color of the map. (**Required**)                                             |
+
+## Credits
+
+- Ported from [World Map by Aceternity UI](https://ui.aceternity.com/components/world-map)
