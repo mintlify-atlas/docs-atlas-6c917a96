@@ -1,0 +1,45 @@
+---
+title: Text Reveal
+description: Animate text line-by-line using GSAP's SplitText for smooth word or line entrance effects.
+---
+
+## Installation
+
+<Tabs>
+  <Tab title="CLI">
+```bash
+    npx inspira-ui@latest add text-reveal
+    ```
+  </Tab>
+  <Tab title="Manual">
+    <Steps>
+      <Step>
+        Install the required dependencies:
+
+        ```bash
+        npm install gsap
+        ```
+      </Step>
+      <Step>
+        Copy the following code into `~/components/inspira-ui/text-reveal.vue`:
+
+        ```vue file="text-reveal.vue"
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Props
+
+| Prop Name        | Type     | Default | Description                                      |
+| ---------------- | -------- | ------- | ------------------------------------------------ |
+| `class`          | `string` | `-`     | Additional classes for the inner text container. |
+| `containerClass` | `string` | `-`     | Additional classes for the outer container.      |
+| `duration`       | `number` | `0.6`   | Animation duration for line reveal.              |
+| `delay`          | `number` | `0.2`   | Initial delay before animation starts.           |
+| `stagger`        | `number` | `0.1`   | Animation delay between each line reveal.        |
+
+## Credits
+
+- Powered by [GSAP](https://gsap.com/) and [GSAP SplitText](https://gsap.com/docs/v3/Plugins/SplitText/).

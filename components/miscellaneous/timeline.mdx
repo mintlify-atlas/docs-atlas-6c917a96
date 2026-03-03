@@ -1,0 +1,46 @@
+---
+title: Timeline
+description: A visually appealing and interactive timeline component with smooth animations, sticky labels, and a gradient scrolling effect.
+---
+
+A visually appealing and interactive timeline component with smooth animations, sticky labels, and a gradient scrolling effect.
+
+## Preview
+
+<ComponentPreview name="timeline-demo" />
+
+## Installation
+
+<Tabs items={['CLI', 'Manual']}>
+  <Tab value="CLI">
+    ```bash
+    npx inspira-ui@latest add timeline
+    ```
+  </Tab>
+  <Tab value="Manual">
+    <Steps>
+      <Step>
+        Copy and paste the following code into your project.
+
+        <ComponentSource name="timeline" />
+      </Step>
+      <Step>
+        Update the import paths to match your project setup.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Props
+
+| Prop Name        | Type                               | Default | Description                                        |
+| ---------------- | ---------------------------------- | ------- | -------------------------------------------------- |
+| `containerClass` | `string`                           | `""`    | Additional CSS classes for the timeline container. |
+| `class`          | `string`                           | `""`    | Additional CSS classes for styling.                |
+| `items`          | `{ id: string; label: string; }[]` | `[]`    | List of timeline items, each with an ID and label. |
+| `title`          | `string`                           | `""`    | Title of the timeline section.                     |
+| `description`    | `string`                           | `""`    | Description text displayed below the title.        |
+
+## Credits
+
+- Inspired and ported from [Aceternity UI's Timeline](https://ui.aceternity.com/components/timeline).

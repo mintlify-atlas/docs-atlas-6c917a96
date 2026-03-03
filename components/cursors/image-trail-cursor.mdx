@@ -1,0 +1,71 @@
+---
+title: Image Trail Cursor
+description: An interactive cursor effect that creates a dynamic trail of images following mouse movement with multiple animation variants.
+---
+
+<ComponentPreview name="image-trail-cursor" />
+
+## Installation
+
+<Tabs items={['CLI', 'Manual']}>
+  <Tab value="CLI">
+    ```bash
+    npx inspira-ui@latest add image-trail-cursor
+    ```
+  </Tab>
+  <Tab value="Manual">
+    <Steps>
+      <Step>
+        Install dependencies:
+
+        ```bash
+        npm install gsap
+        ```
+      </Step>
+      <Step>
+        Copy the component source:
+
+        <ComponentSource name="image-trail-cursor" />
+      </Step>
+      <Step>
+        Update import paths as needed.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Usage
+
+```vue
+<template>
+  <ImageTrailCursor
+    :images="[
+      '/image1.jpg',
+      '/image2.jpg',
+      '/image3.jpg'
+    ]"
+    variant="type1"
+  />
+</template>
+
+<script setup lang="ts">
+import ImageTrailCursor from "@/components/inspira/ui/cursors/ImageTrailCursor.vue";
+</script>
+```
+
+## Props
+
+| Prop Name | Type          | Default   | Description                                            |
+| --------- | ------------- | --------- | ------------------------------------------------------ |
+| `images`  | `string[]`    | `[]`      | Array of image URLs to display in the trailing effect. |
+| `variant` | `VariantType` | `"type1"` | Animation variant type (`"type1"` through `"type7"`).  |
+
+<Callout type="info">
+This component creates a full-width, full-height container with high z-index for cursor tracking. Each image is 190px wide with a 1.1 aspect ratio and rounded corners.
+</Callout>
+
+## Credits
+
+- Inspired by modern cursor trail effects and image hover interactions.
+- Built with Vue 3 Composition API for optimal reactivity and performance.
+- Ported from [Codrops Article](https://tympanus.net/codrops/2023/10/18/ideas-for-image-motion-trail-animations/)

@@ -1,0 +1,51 @@
+---
+title: Text Reveal Card
+description: Mousemove effect to reveal text content at the bottom of the card.
+---
+
+## Installation
+
+<Tabs>
+  <Tab title="CLI">
+```bash
+npx inspira-ui@latest add text-reveal-card
+```
+  </Tab>
+  <Tab title="Manual">
+    <Steps>
+      <Step>
+        Copy the following code into `~/components/inspira-ui/text-reveal-card.vue`:
+
+        ```vue file="text-reveal-card.vue"
+        ```
+      </Step>
+      <Step>
+        Copy the following code into `~/components/inspira-ui/text-reveal-stars.vue`:
+
+        ```vue file="text-reveal-stars.vue"
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Props
+
+| Prop Name  | Type     | Description                                                      |
+| ---------- | -------- | ---------------------------------------------------------------- |
+| class      | `String` | Additional classes to be added to the card.                      |
+| starsCount | `Number` | Control the number of stars that are generated                   |
+| starsClass | `String` | Additional classes to be added to the stars floating on content. |
+
+## Slots
+
+| Slot Name  | Description                                             |
+| ---------- | ------------------------------------------------------- |
+| header     | `String`                                                |
+| text       | Display default text when the card is not hovered over. |
+| revealText | Text to be revealed when hovered over the card.         |
+
+## Credits
+
+- Credits to [M Atif](https://github.com/atif0075) for porting this component.
+- Ported from [Aceternity UI's Text Reveal Card](https://ui.aceternity.com/components/text-reveal-card).

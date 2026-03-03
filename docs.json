@@ -93,17 +93,18 @@
           {
             "group": "Cursors",
             "pages": [
-              "components/cursors/cursor-following-text",
-              "components/cursors/glowing-stars-background",
-              "components/cursors/spotlight",
-              "components/cursors/trailing-cursor"
+              "components/cursors/fluid-cursor",
+              "components/cursors/image-trail-cursor",
+              "components/cursors/sleek-line-cursor",
+              "components/cursors/smooth-cursor",
+              "components/cursors/tailed-cursor"
             ]
           },
           {
             "group": "Device Mocks",
             "pages": [
-              "components/device-mocks/browser-mock",
-              "components/device-mocks/phone-mock"
+              "components/device-mocks/iphone-mockup",
+              "components/device-mocks/safari-mockup"
             ]
           },
           {
@@ -139,7 +140,10 @@
               "components/text-animations/text-generate-effect",
               "components/text-animations/text-glitch",
               "components/text-animations/text-highlight",
-              "components/text-animations/text-hover-effect"
+              "components/text-animations/text-hover-effect",
+              "components/text-animations/text-reveal",
+              "components/text-animations/text-reveal-card",
+              "components/text-animations/text-scroll-reveal"
             ]
           },
           {
@@ -201,7 +205,10 @@
               "components/miscellaneous/multi-step-loader",
               "components/miscellaneous/photo-gallery",
               "components/miscellaneous/scroll-island",
-              "components/miscellaneous/shader-toy"
+              "components/miscellaneous/shader-toy",
+              "components/miscellaneous/svg-mask",
+              "components/miscellaneous/timeline",
+              "components/miscellaneous/tracing-beam"
             ]
           },
           {

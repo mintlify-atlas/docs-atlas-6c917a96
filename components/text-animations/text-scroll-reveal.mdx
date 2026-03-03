@@ -1,0 +1,41 @@
+---
+title: Text Scroll Reveal
+description: A component that reveals text word by word as you scroll, with customizable text and styling.
+---
+
+## Installation
+
+<Tabs>
+  <Tab title="CLI">
+```bash
+npx inspira-ui@latest add text-scroll-reveal
+```
+  </Tab>
+  <Tab title="Manual">
+    <Steps>
+      <Step>
+        Copy the following code into `~/components/inspira-ui/text-scroll-reveal.vue`:
+
+        ```vue file="text-scroll-reveal.vue"
+        ```
+      </Step>
+      <Step>
+        Copy the following code into `~/components/inspira-ui/scroll-word.vue`:
+
+        ```vue file="scroll-word.vue"
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Props
+
+| Prop Name | Type     | Default | Description                                                         |
+| --------- | -------- | ------- | ------------------------------------------------------------------- |
+| `text`    | `string` | N/A     | The text content to display and reveal word by word during scroll.  |
+| `class`   | `string` | `""`    | Additional CSS classes to apply to the component for customization. |
+
+## Credits
+
+- Ported from [Magic UI Text Reveal](https://magicui.design/docs/components/text-reveal).

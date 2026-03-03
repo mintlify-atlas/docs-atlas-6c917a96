@@ -1,0 +1,72 @@
+---
+title: Smooth Cursor
+description: A customizable, physics-based smooth cursor animation component for Vue applications.
+---
+
+<ComponentPreview name="smooth-cursor" />
+
+## Installation
+
+<Tabs items={['CLI', 'Manual']}>
+  <Tab value="CLI">
+    ```bash
+    npx inspira-ui@latest add smooth-cursor
+    ```
+  </Tab>
+  <Tab value="Manual">
+    <Steps>
+      <Step>
+        Copy the component source:
+
+        <ComponentSource name="smooth-cursor" />
+      </Step>
+      <Step>
+        Update import paths as needed.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Usage
+
+```vue
+<template>
+  <SmoothCursor
+    :cursor="CustomCursor"
+    :springConfig="{
+      damping: 20,
+      stiffness: 300,
+      mass: 0.5,
+      restDelta: 0.001
+    }"
+  />
+</template>
+
+<script setup lang="ts">
+import SmoothCursor from "@/components/inspira/ui/cursors/SmoothCursor.vue";
+import CustomCursor from "./CustomCursor.vue";
+</script>
+```
+
+## Props
+
+| Prop Name      | Type           | Default         | Description                                             |
+| -------------- | -------------- | --------------- | ------------------------------------------------------- |
+| `cursor`       | `Component`    | `DefaultCursor` | Custom cursor component to replace the default cursor   |
+| `springConfig` | `SpringConfig` | `See below`     | Configuration object for the spring animation behavior. |
+
+### SpringConfig Type
+
+```ts
+interface springConfig {
+  damping: number;
+  stiffness: number;
+  mass: number;
+  restDelta: number;
+}
+```
+
+## Credits
+
+- Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
+- Ported from [Magic UI Smooth Cursor](https://magicui.design/docs/components/smooth-cursor).

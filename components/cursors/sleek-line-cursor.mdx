@@ -1,0 +1,65 @@
+---
+title: Sleek Line Cursor
+description: A reactive animated cursor trail with smooth wave-like motion, using spring physics and dynamic color waves.
+---
+
+<ComponentPreview name="sleek-line-cursor" />
+
+## Installation
+
+<Tabs items={['CLI', 'Manual']}>
+  <Tab value="CLI">
+    ```bash
+    npx inspira-ui@latest add sleek-line-cursor
+    ```
+  </Tab>
+  <Tab value="Manual">
+    <Steps>
+      <Step>
+        Copy the component source:
+
+        <ComponentSource name="sleek-line-cursor" />
+      </Step>
+      <Step>
+        Update import paths as needed.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Usage
+
+```vue
+<template>
+  <SleekLineCursor
+    :trails="20"
+    :size="50"
+    :friction="0.5"
+    :dampening="0.25"
+    :tension="0.98"
+  />
+</template>
+
+<script setup lang="ts">
+import SleekLineCursor from "@/components/inspira/ui/cursors/SleekLineCursor.vue";
+</script>
+```
+
+## Props
+
+| Prop Name   | Type                 | Default     | Description                                                               |
+| ----------- | -------------------- | ----------- | ------------------------------------------------------------------------- |
+| `class`     | `string \| string[]` | `undefined` | Additional CSS classes for the canvas container element.                  |
+| `trails`    | `number`             | `20`        | Number of trailing lines rendered behind the cursor.                      |
+| `size`      | `number`             | `50`        | Number of spring-connected nodes per trail.                               |
+| `friction`  | `number`             | `0.5`       | Global friction applied to velocity.                                      |
+| `dampening` | `number`             | `0.25`      | Velocity damping applied between connected nodes.                         |
+| `tension`   | `number`             | `0.98`      | Reduces spring intensity across the tail, giving a fluid tapering motion. |
+
+<Callout type="info">
+This component uses `pointer-events-none` and is fixed fullscreen by default. You can extend or override its styling via the `class` prop.
+</Callout>
+
+## Credits
+
+- Ported from [Canvas Cursor by Cursify](https://cursify.vercel.app/components/canvas-cursor).

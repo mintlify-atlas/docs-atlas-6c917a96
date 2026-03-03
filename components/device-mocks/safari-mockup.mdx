@@ -1,0 +1,41 @@
+---
+title: Safari Mockup
+description: An SVG mockup of the Safari browser.
+---
+
+## Usage
+
+A Safari browser mockup component that displays content inside an SVG representation of the Safari browser.
+
+<CodeGroup>
+```vue Vue
+<SafariMockup
+  url="https://example.com"
+  src="/path/to/your/image.png"
+  :width="1203"
+  :height="753"
+/>
+```
+</CodeGroup>
+
+## Props
+
+<ParamField path="url" type="string" default="null">
+  URL displayed in the mockup's address bar.
+</ParamField>
+
+<ParamField path="src" type="string" default="null">
+  URL of the image to display inside the mockup.
+</ParamField>
+
+<ParamField path="width" type="number" default="1203">
+  Width of the mockup SVG in pixels.
+</ParamField>
+
+<ParamField path="height" type="number" default="753">
+  Height of the mockup SVG in pixels.
+</ParamField>
+
+## Credits
+
+- Ported from [Magic UI](https://magicui.design/docs/components/safari)

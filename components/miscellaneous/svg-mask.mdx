@@ -1,0 +1,44 @@
+---
+title: SVG Mask
+description: A dynamic SVG mask component that reveals content with hover and mouse movement.
+---
+
+A dynamic SVG mask component that reveals content with hover and mouse movement.
+
+## Preview
+
+<ComponentPreview name="svg-mask-demo" />
+
+## Installation
+
+<Tabs items={['CLI', 'Manual']}>
+  <Tab value="CLI">
+    ```bash
+    npx inspira-ui@latest add svg-mask
+    ```
+  </Tab>
+  <Tab value="Manual">
+    <Steps>
+      <Step>
+        Copy and paste the following code into your project.
+
+        <ComponentSource name="svg-mask" />
+      </Step>
+      <Step>
+        Update the import paths to match your project setup.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Props
+
+| Prop Name    | Type     | Default | Description                                |
+| ------------ | -------- | ------- | ------------------------------------------ |
+| `class`      | `string` | `""`    | Additional CSS classes for custom styling. |
+| `size`       | `number` | `10`    | Initial size of the mask in pixels.        |
+| `revealSize` | `number` | `600`   | Size of the mask during hover in pixels.   |
+
+## Credits
+
+- Ported from [Aceternity UI's SVG Mask Effect](https://ui.aceternity.com/components/text-generate-effect).
